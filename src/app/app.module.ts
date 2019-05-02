@@ -16,7 +16,6 @@ import {HelpersModule} from './helpers/helpers.module';
 import {HomeComponent} from './layouts/home/home.component';
 import {LayoutModule} from './layouts/layout.module';
 import {PageNotFoundComponent} from './layouts/pagenotfound/pagenotfound.component';
-import {OrderModule} from './order/order.module';
 import {IncidentModule} from './incident/incident.module';
 
 
@@ -33,7 +32,6 @@ import {IncidentModule} from './incident/incident.module';
     CoreModule,
     ApiModule,
     AccountModule,
-    OrderModule,
     HelpersModule,
     IncidentModule,
     AppRoutingModule
