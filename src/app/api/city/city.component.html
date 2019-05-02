@@ -1,0 +1,20 @@
+
+
+<div style="text-align: center" >
+  <h3> Cities List</h3>
+  <div  *ngIf="cityDataAvailable()" style="text-align: center">
+    <table style="text-align: center">
+      <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>State Name</th>
+      </tr>
+      <tr *ngFor="let city of (citiesObservable)">
+        <td>{{city.id}}</td>
+        <td>{{city.name}}</td>
+        <td>{{city.state.name}}</td>
+      </tr>
+    </table>
+  </div>
+  <a routerLink="/home">Click here to Home</a>
+</div>

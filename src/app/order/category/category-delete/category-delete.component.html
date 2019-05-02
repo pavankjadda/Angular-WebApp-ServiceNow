@@ -1,0 +1,17 @@
+<div style="margin-top: 30px">
+  <h2>Delete Category</h2>
+  <br/>
+  <form [formGroup]="categoryForm">
+    <div class="form-group">
+      <label for="id">Category Id</label>
+      <input class="form-control" formControlName="id" id="id" required type="text">
+    </div>
+    <div class="form-group">
+      <label for="name">Category Name</label>
+      <input class="form-control" formControlName="name" id="name" placeholder="Enter Category Name" required
+             type="text">
+    </div>
+
+    <button (click)="deleteCategory()" class="btn btn-primary" type="submit">Delete</button>
+  </form>
+</div>

@@ -1,0 +1,34 @@
+<div class="container container-fluid">
+  <h3 style="text-align: center"> Orders List</h3>
+  <div *ngIf="orderDetailsDataAvailable()">
+    <table class="table table-bordered">
+      <tr style="text-align: center">
+        <th>Order Id</th>
+        <th>Order Status</th>
+        <th>Products</th>
+        <th>Purchased By</th>
+        <th>Shipping Address</th>
+        <th>Created Time</th>
+      </tr>
+      <tr *ngFor="let order of (orderdetailObservable)" style="text-align: center">
+        <td><a [routerLink]="['/order', order.id]">{{order.id}}</a></td>
+        <td>{{order.orderStatus.status}}</td>
+        <td>{{order.productList[0].name}}</td>
+        <td>{{order.purchasedBy.firstName}}</td>
+        <td>{{order.shippingAddress.streetName}},
+          {{order.shippingAddress.apartment}} <br/>
+          {{order.shippingAddress.city.name}},
+          {{order.shippingAddress.state.name}} -
+          {{order.shippingAddress.zipCode}} <br/>
+        </td>
+        <td>{{order.orderCreatedDateTime}}</td>
+      </tr>
+    </table>
+
+    <div style="text-align: center">
+      <a [routerLink]="['/order']" style="margin-right: 30px">Back</a>
+      <a [routerLink]="['/order/new']" style="margin-right: 30px">Create New</a>
+    </div>
+  </div>
+
+</div>

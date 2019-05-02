@@ -1,0 +1,22 @@
+
+<div style="text-align: center" >
+  <h3> Countries List</h3>
+  <div  *ngIf="isDataReady()" style="text-align: center">
+    <table style="text-align: center">
+      <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>code</th>
+        <th>ISO Code</th>
+      </tr>
+      <tr *ngFor="let country of (countriesObservable)">
+        <td>{{country.id}}</td>
+        <td>{{country.name}}</td>
+        <td>{{country.code}}</td>
+        <td>{{country.isoCode}}</td>
+      </tr>
+    </table>
+  </div>
+  <a routerLink="/home">Click here to Home</a>
+</div>
+

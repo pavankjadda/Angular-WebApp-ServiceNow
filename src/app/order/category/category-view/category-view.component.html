@@ -1,0 +1,26 @@
+<div *ngIf="categoryDataAvailable()">
+  <form [formGroup]="">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="id">Category Id</label>
+      <div class="col-sm-10">
+        <input class="form-control-plaintext" id="id" readonly type="text" value="{{categoryObservable.id}}">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="name">Category Name</label>
+      <div class="col-sm-10">
+        <input class="form-control-plaintext" id="name" readonly type="text" value="{{categoryObservable.name}}">
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<p>
+  <a [routerLink]="['/category/list']" style="margin-right: 30px">Back </a>
+  <a [routerLink]="['./edit']" style="margin-right: 30px">Edit </a>
+  <a [routerLink]="['./delete']">Delete </a>
+</p>
+
+
+<router-outlet></router-outlet>
