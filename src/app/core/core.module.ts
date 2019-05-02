@@ -7,6 +7,7 @@ import {LoginComponent} from './login/login.component';
 import {LogoutComponent} from './logout/logout.component';
 import {RoleComponent} from './role/role.component';
 import {UserComponent} from './user/user.component';
+import {Http403ErrorComponent} from './helpers/http403-error/http403-error.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {UserComponent} from './user/user.component';
     LoginComponent,
     UserComponent,
     RoleComponent,
-    LogoutComponent]
+    LogoutComponent,
+    Http403ErrorComponent]
 })
 
 

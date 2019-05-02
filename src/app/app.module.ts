@@ -8,11 +8,9 @@ import {AccountModule} from './account/account.module';
 import {AdminModule} from './admin/admin.module';
 import {ApiModule} from './api/api.module';
 import {AppRoutingModule} from './app-routing.module';
-
 import {AppComponent} from './app.component';
 import {CoreModule} from './core/core.module';
 import {httpInterceptorProviders} from './core/intercepters/httpInterceptorProviders';
-import {HelpersModule} from './helpers/helpers.module';
 import {HomeComponent} from './layouts/home/home.component';
 import {LayoutModule} from './layouts/layout.module';
 import {PageNotFoundComponent} from './layouts/pagenotfound/pagenotfound.component';
@@ -32,7 +30,6 @@ import {IncidentModule} from './incident/incident.module';
     CoreModule,
     ApiModule,
     AccountModule,
-    HelpersModule,
     IncidentModule,
     AppRoutingModule
   ],

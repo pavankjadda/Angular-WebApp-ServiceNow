@@ -1,5 +1,5 @@
 import {Routes} from '@angular/router';
-import {UserAuthGuard} from '../../guards/user-auth.guard';
+import {UserAuthGuard} from '../../core/guards/user-auth.guard';
 import {IncidentComponent} from './incident.component';
 import {IncidentHomeComponent} from './incident-home/incident-home.component';
 import {IncidentListComponent} from './incident-list/incident-list.component';

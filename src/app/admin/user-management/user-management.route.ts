@@ -1,5 +1,5 @@
 import {Routes} from '@angular/router';
-import {AuthGuard} from '../../guards/auth.guard';
+import {AuthGuard} from '../../core/guards/auth.guard';
 import {UserManagementHomeComponent} from './user-management-home/user-management-home.component';
 import {UserManagementComponent} from './user-management.component';
 
