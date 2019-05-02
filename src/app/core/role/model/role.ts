@@ -1,8 +1,6 @@
-import {Privilege} from '../../privilege/model/privilege';
-
 export class Role
 {
-  id: number;
+  sysId: string;
   name: string;
-  privilege: Privilege;
+  description: string;
 }

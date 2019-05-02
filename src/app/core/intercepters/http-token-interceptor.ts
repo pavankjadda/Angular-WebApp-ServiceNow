@@ -25,15 +25,6 @@ export class HttpTokenInterceptor implements HttpInterceptor
         } );
     }
 
-    request=request.clone(
-      {
-        setHeaders: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers' : 'X-Requested-With'
-        }
-      } );
-
-
     return next.handle( request );
   }
 }

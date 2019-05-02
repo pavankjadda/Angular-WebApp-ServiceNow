@@ -2,17 +2,13 @@
   <a class="navbar-brand" routerLink="/">Home</a>
   <div class="navbar-expand mr-auto">
     <div *ngIf="isLoggedIn()" class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/order">Orders</a>
-      <a class="nav-item nav-link" routerLink="/category">Categories</a>
-      <a class="nav-item nav-link" routerLink="/product">Products</a>
+      <a class="nav-item nav-link" routerLink="/incident">Incidents</a>
     </div>
   </div>
 
   <div class="navbar-expand ml-auto navbar-nav">
     <div  *ngIf="isLoggedIn()" class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/settings">Settings</a>
       <a class="nav-item nav-link" routerLink="/profile">Profile</a>
-      <a class="nav-item nav-link" routerLink="/admin">Admin</a>
       <a class="nav-item nav-link" routerLink="/logout">Logout</a>
     </div>
   </div>

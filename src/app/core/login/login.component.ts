@@ -3,6 +3,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {AuthService} from '../auth/auth.service';
+import {SERVER_API_URL, USER_INFO_URL} from '../../app.constants';
+import {HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -50,35 +52,6 @@ export class LoginComponent implements OnInit
   get f()
   {
     return this.loginForm.controls;
-  }
-
-
-  login()
-  {
-    this.spinner.show();
-    this.authService.login( this.f.username.value, this.f.password.value ).subscribe(
- response=>
-      {
-        if(response['token']&&AuthService.isUserLoggedIn())
-        {
-          this.router.navigate(['/home']);
-        }
-        else
-        {
-          localStorage.removeItem( 'currentUser' );
-          this.router.navigate(['/login']);
-        }
-      },
-        error =>
-        {
-            console.log(error);
-            this.loginFailed=true;
-          this.spinner.hide();
-        },
-      () =>
-      {
-        this.spinner.hide();
-      } );
   }
 
   oauth2Login()
@@ -136,9 +109,17 @@ export class LoginComponent implements OnInit
     this.message='Logged '+(AuthService.isUserLoggedIn() ? 'in' : 'out');
   }
 
-  private getUserInfoUsingOAuth2Token(accessToken)
+  private getUserInfoUsingOAuth2Token(accessToken: string)
   {
-    this.authService.getUserInfoUsingOAuth2Token(accessToken).subscribe(
+    const userInfoUrl=SERVER_API_URL + USER_INFO_URL;
+    const httpOptions={
+      headers: new HttpHeaders(
+        {
+          'Accept':'application/json',
+          'Authorization': 'Bearer ' + accessToken
+        })
+    };
+    this.authService.getUserInfoUsingOAuth2Token(userInfoUrl,httpOptions).subscribe(
       userObject =>
       {
         this.router.navigate(['/home']);

@@ -2,7 +2,7 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {OAUTH2_ACCESS_TOKEN_URI, OAUTH2_CLIENT_ID, OAUTH2_CLIENT_SECRET, SERVER_API_URL} from '../../app.constants';
+import {OAUTH2_ACCESS_TOKEN_URI, OAUTH2_CLIENT_ID, OAUTH2_CLIENT_SECRET} from '../../app.constants';
 import {User} from '../user/model/user';
 
 @Injectable({
@@ -30,36 +30,6 @@ export class AuthService
     return localStorage.getItem( 'isLoggedIn' )==='true';
   }
 
-
-  // @ts-ignore
-  login(username: string, password: string): Observable<any>
-  {
-    const httpOptions={
-      headers: new HttpHeaders(
-        {
-          'Content-Type': 'application/json',
-          authorization: 'Basic '+btoa( username+':'+password )
-        } )
-    };
-    //return this.httpClient.get<any>( SERVER_API_URL+'login', httpOptions );
-
-
-    return this.httpClient.get<any>( SERVER_API_URL+'login', httpOptions)
-      .pipe( map( user =>
-      {
-        // login successful if user id exists
-        if (user.id)
-        {
-          // store user details and Spring Session token in local storage to keep user logged in between page refreshes
-          localStorage.setItem( 'currentUser', JSON.stringify( user ) );
-          localStorage.setItem( 'isLoggedIn', 'true' );
-          this.currentUserSubject.next( user );
-        }
-        return user;
-      }));
-  }
-
-  // @ts-ignore
   oauthLogin(username: string, password: string)
   {
     const httpOptions={
@@ -73,22 +43,14 @@ export class AuthService
     const body = new HttpParams()
       .set('grant_type', 'password')
       .set('username', username)
-      .set('password', password)
-      .set('client_id', 'spring-security-oauth2-read-write-client');
+      .set('password', password);
 
     return this.httpClient.post<any>(OAUTH2_ACCESS_TOKEN_URI, body.toString(), httpOptions);
   }
 
-  getUserInfoUsingOAuth2Token(accessToken: any)
+  getUserInfoUsingOAuth2Token(userInfoUrl: string, httpOptions: { headers: HttpHeaders })
   {
-    const httpOptions = {
-      headers: new HttpHeaders(
-        {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          authorization: 'Bearer ' + accessToken
-        })
-    };
-    return this.httpClient.get<any>(SERVER_API_URL + 'user/oauth2', httpOptions)
+    return this.httpClient.get<User>(userInfoUrl,httpOptions)
                .pipe(map(user =>
                {
                  if (user)
