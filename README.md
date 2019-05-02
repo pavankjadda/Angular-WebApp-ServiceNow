@@ -18,11 +18,10 @@ Angular 7 web application developed to replace Service Portal on ServiceNow. It 
 
 
 
-
 #### How to  Run Angular App?
 ##### Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --watch` to run this on local machine. Navigate to `http://localhost:4200/`
 
 ##### Build
 
