@@ -1,8 +1,8 @@
-import {HttpHeaders} from "@angular/common/http";
-import {Component, OnInit} from "@angular/core";
-import {Observable} from "rxjs";
-import {Country} from "./model/country";
-import {CountryService} from "./services/country.service";
+import {HttpHeaders} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs';
+import {Country} from './model/country';
+import {CountryService} from './services/country.service';
 
 @Component( {
   selector: 'app-country',

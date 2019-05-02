@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CityComponent} from "./city.component";
+import {CityComponent} from './city.component';
 
 describe('CityComponent', () => {
   let component: CityComponent;

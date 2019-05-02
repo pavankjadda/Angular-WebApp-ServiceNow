@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {OrderDetailEditComponent} from "./order-detail-edit.component";
+import {OrderDetailEditComponent} from './order-detail-edit.component';
 
 describe('OrderDetailEditComponent', () => {
   let component: OrderDetailEditComponent;

@@ -1,9 +1,9 @@
-import {HttpHeaders} from "@angular/common/http";
-import {Component, OnInit} from "@angular/core";
-import {Observable} from "rxjs";
-import {SERVER_API_URL} from "../../app.constants";
-import {City} from "./model/city";
-import {CityService} from "./services/city.service";
+import {HttpHeaders} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs';
+import {SERVER_API_URL} from '../../app.constants';
+import {City} from './model/city';
+import {CityService} from './services/city.service';
 
 @Component( {
   selector: 'app-city',

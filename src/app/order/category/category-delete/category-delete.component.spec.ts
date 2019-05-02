@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CategoryDeleteComponent} from "./category-delete.component";
+import {CategoryDeleteComponent} from './category-delete.component';
 
 describe('CategoryDeleteComponent', () => {
   let component: CategoryDeleteComponent;

@@ -1,6 +1,6 @@
-import {Routes} from "@angular/router";
-import {AuthGuard} from "../../guards/auth.guard";
-import {HealthComponent} from "./health.component";
+import {Routes} from '@angular/router';
+import {AuthGuard} from '../../guards/auth.guard';
+import {HealthComponent} from './health.component';
 
 export const HealthManagementRoutes: Routes = [
   {

@@ -1,7 +1,7 @@
-import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
-import {Inject, Injectable, InjectionToken} from "@angular/core";
-import {Observable} from "rxjs";
-import {timeout} from "rxjs/operators";
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {Inject, Injectable, InjectionToken} from '@angular/core';
+import {Observable} from 'rxjs';
+import {timeout} from 'rxjs/operators';
 
 export const DEFAULT_TIMEOUT=new InjectionToken<number>('defaultTimeout');
 

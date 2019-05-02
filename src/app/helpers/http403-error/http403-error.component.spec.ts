@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {Http403ErrorComponent} from "./http403-error.component";
+import {Http403ErrorComponent} from './http403-error.component';
 
 describe( 'Http403ErrorComponent', () =>
 {

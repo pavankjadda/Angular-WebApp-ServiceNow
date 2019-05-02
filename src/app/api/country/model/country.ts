@@ -1,4 +1,4 @@
-import {Region} from "../../region/model/region";
+import {Region} from '../../region/model/region';
 
 export class Country
 {

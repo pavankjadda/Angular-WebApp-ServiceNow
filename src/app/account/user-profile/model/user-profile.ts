@@ -1,4 +1,4 @@
-import {Address} from "../../../api/address/model/address";
+import {Address} from '../../../api/address/model/address';
 
 export class UserProfile
 {

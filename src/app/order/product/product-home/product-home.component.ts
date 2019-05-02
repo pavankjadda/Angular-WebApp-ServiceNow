@@ -1,6 +1,6 @@
-import {Component, OnInit} from "@angular/core";
-import {ActivatedRoute, Router} from "@angular/router";
-import {AuthService} from "../../../core/auth/auth.service";
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {AuthService} from '../../../core/auth/auth.service';
 
 @Component( {
   selector: 'app-product-home',

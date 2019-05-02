@@ -1,7 +1,7 @@
-import {AddressType} from "../../address-type/model/address-type";
-import {City} from "../../city/model/city";
-import {Country} from "../../country/model/country";
-import {State} from "../../state/model/state";
+import {AddressType} from '../../address-type/model/address-type';
+import {City} from '../../city/model/city';
+import {Country} from '../../country/model/country';
+import {State} from '../../state/model/state';
 
 export class Address
 {

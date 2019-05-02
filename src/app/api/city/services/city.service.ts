@@ -1,7 +1,6 @@
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Injectable} from "@angular/core";
-import {Observable} from "rxjs";
-import {City} from "../model/city";
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {City} from '../model/city';
 
 @Injectable({
   providedIn: 'root'

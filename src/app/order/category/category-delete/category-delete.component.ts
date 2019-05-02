@@ -1,8 +1,8 @@
-import {Component, OnInit} from "@angular/core";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
-import {SERVER_API_URL} from "../../../app.constants";
-import {CategoryService} from "../service/category.service";
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import {SERVER_API_URL} from '../../../app.constants';
+import {CategoryService} from '../service/category.service';
 
 @Component({
   selector: 'app-category-delete',

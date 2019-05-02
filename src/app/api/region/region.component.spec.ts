@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {RegionComponent} from "./region.component";
+import {RegionComponent} from './region.component';
 
 describe('RegionComponent', () => {
   let component: RegionComponent;

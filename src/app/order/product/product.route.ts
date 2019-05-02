@@ -1,6 +1,6 @@
-import {Routes} from "@angular/router";
-import {UserAuthGuard} from "../../guards/user-auth.guard";
-import {ProductHomeComponent} from "./product-home/product-home.component";
+import {Routes} from '@angular/router';
+import {UserAuthGuard} from '../../guards/user-auth.guard';
+import {ProductHomeComponent} from './product-home/product-home.component';
 
 export const productManagementRoute: Routes=[
   {

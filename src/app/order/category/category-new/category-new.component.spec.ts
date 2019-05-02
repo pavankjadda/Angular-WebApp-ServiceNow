@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CategoryNewComponent} from "./category-new.component";
+import {CategoryNewComponent} from './category-new.component';
 
 describe('CategoryNewComponent', () => {
   let component: CategoryNewComponent;

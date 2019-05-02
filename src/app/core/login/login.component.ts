@@ -1,8 +1,8 @@
-import {Component, OnInit} from "@angular/core";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
-import {NgxSpinnerService} from "ngx-spinner";
-import {AuthService} from "../auth/auth.service";
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import {NgxSpinnerService} from 'ngx-spinner';
+import {AuthService} from '../auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -87,21 +87,21 @@ export class LoginComponent implements OnInit
     this.authService.oauthLogin( this.f.username.value, this.f.password.value ).subscribe(
       response=>
       {
-        if (response["access_token"])
+        if (response['access_token'])
         {
           this.router.navigate(['/home']);
 
           //login successful if there's a Spring Session token in the response
-          if (response && response["access_token"])
+          if (response && response['access_token'])
           {
             //store user details and Spring Session OAuth token refreshes
-            localStorage.setItem("access_token", response["access_token"]);
-            localStorage.setItem("refresh_token", response["access_token"]);
-            localStorage.setItem("token_type", response["token_type"]);
-            localStorage.setItem("scope", response["scope"]);
-            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem('access_token', response['access_token']);
+            localStorage.setItem('refresh_token', response['access_token']);
+            localStorage.setItem('token_type', response['token_type']);
+            localStorage.setItem('scope', response['scope']);
+            localStorage.setItem('isLoggedIn', 'true');
 
-            this.getUserInfoUsingOAuth2Token(response["access_token"]);
+            this.getUserInfoUsingOAuth2Token(response['access_token']);
           }
         }
         else
@@ -141,14 +141,14 @@ export class LoginComponent implements OnInit
     this.authService.getUserInfoUsingOAuth2Token(accessToken).subscribe(
       userObject =>
       {
-        this.router.navigate(["/home"]);
-        console.log("userObject" + userObject);
+        this.router.navigate(['/home']);
+        console.log('userObject' + userObject);
       },
       error =>
       {
-        localStorage.removeItem("currentUser");
-        this.router.navigate(["/login"]);
-        console.log("Error occurred while fetching user info");
+        localStorage.removeItem('currentUser');
+        this.router.navigate(['/login']);
+        console.log('Error occurred while fetching user info');
       }
     );
   }

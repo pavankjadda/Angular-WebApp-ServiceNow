@@ -1,9 +1,9 @@
-import {NgModule} from "@angular/core";
-import {RouterModule} from "@angular/router";
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
-import {categoryManagementRoute} from "./category/category.route";
-import {orderDetailManagementRoute} from "./order-detail/order-detail.route";
-import {productManagementRoute} from "./product/product.route";
+import {categoryManagementRoute} from './category/category.route';
+import {orderDetailManagementRoute} from './order-detail/order-detail.route';
+import {productManagementRoute} from './product/product.route';
 
 
 @NgModule(

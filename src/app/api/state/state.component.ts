@@ -1,8 +1,8 @@
-import {HttpEvent, HttpHeaders} from "@angular/common/http";
-import {Component, OnInit} from "@angular/core";
-import {Observable} from "rxjs";
-import {State} from "./model/state";
-import {StateService} from "./services/state.service";
+import {HttpHeaders} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs';
+import {State} from './model/state';
+import {StateService} from './services/state.service';
 
 @Component( {
   selector: 'app-state',

@@ -1,9 +1,9 @@
-import {Component, OnInit} from "@angular/core";
-import {NgxSpinnerService} from "ngx-spinner";
-import {Observable} from "rxjs";
-import {SERVER_API_URL} from "../../../app.constants";
-import {Category} from "../model/category";
-import {CategoryService} from "../service/category.service";
+import {Component, OnInit} from '@angular/core';
+import {NgxSpinnerService} from 'ngx-spinner';
+import {Observable} from 'rxjs';
+import {SERVER_API_URL} from '../../../app.constants';
+import {Category} from '../model/category';
+import {CategoryService} from '../service/category.service';
 
 @Component({
   selector: 'app-category-list',

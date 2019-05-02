@@ -1,9 +1,9 @@
-import {HttpHeaders} from "@angular/common/http";
-import {Component, OnDestroy, OnInit} from "@angular/core";
-import {Observable, Subscription} from "rxjs";
-import {BASIC_AUTH, SERVER_API_URL} from "../../../app.constants";
-import {OrderDetail} from "../model/order-detail";
-import {OrderDetailService} from "../service/order-detail.service";
+import {HttpHeaders} from '@angular/common/http';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Observable, Subscription} from 'rxjs';
+import {BASIC_AUTH, SERVER_API_URL} from '../../../app.constants';
+import {OrderDetail} from '../model/order-detail';
+import {OrderDetailService} from '../service/order-detail.service';
 
 @Component( {
   selector: 'app-order-detail-list',

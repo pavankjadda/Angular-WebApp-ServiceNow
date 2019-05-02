@@ -1,7 +1,7 @@
-import {HttpClient} from "@angular/common/http";
-import {Injectable} from "@angular/core";
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
 
-import {State} from "../model/state";
+import {State} from '../model/state';
 
 @Injectable({
   providedIn: 'root'

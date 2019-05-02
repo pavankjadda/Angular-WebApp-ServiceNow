@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CategoryViewComponent} from "./category-view.component";
+import {CategoryViewComponent} from './category-view.component';
 
 describe('CategoryViewComponent', () => {
   let component: CategoryViewComponent;

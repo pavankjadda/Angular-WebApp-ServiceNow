@@ -1,4 +1,4 @@
-import {Privilege} from "../../privilege/model/privilege";
+import {Privilege} from '../../privilege/model/privilege';
 
 export class Role
 {

@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {OrderDetailDeleteComponent} from "./order-detail-delete.component";
+import {OrderDetailDeleteComponent} from './order-detail-delete.component';
 
 describe('OrderDetailDeleteComponent', () => {
   let component: OrderDetailDeleteComponent;

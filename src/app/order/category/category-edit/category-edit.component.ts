@@ -1,10 +1,10 @@
-import {HttpHeaders} from "@angular/common/http";
-import {Component, OnInit} from "@angular/core";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
-import {BASIC_AUTH, SERVER_API_URL} from "../../../app.constants";
-import {Category} from "../model/category";
-import {CategoryService} from "../service/category.service";
+import {HttpHeaders} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import {BASIC_AUTH, SERVER_API_URL} from '../../../app.constants';
+import {Category} from '../model/category';
+import {CategoryService} from '../service/category.service';
 
 @Component({
   selector: 'app-category-edit',

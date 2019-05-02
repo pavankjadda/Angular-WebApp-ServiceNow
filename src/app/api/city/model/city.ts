@@ -1,4 +1,4 @@
-import {State} from "../../state/model/state";
+import {State} from '../../state/model/state';
 
 export class City
 {

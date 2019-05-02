@@ -1,4 +1,4 @@
-import {AbstractControl, FormGroup, ValidatorFn} from "@angular/forms";
+import {AbstractControl, FormGroup, ValidatorFn} from '@angular/forms';
 
 export function usernameValidator(): ValidatorFn {
   return (control: AbstractControl): { [key: string]: boolean } | null => {
