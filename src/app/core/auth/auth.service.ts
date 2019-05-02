@@ -48,18 +48,18 @@ export class AuthService
     return this.httpClient.post<any>(OAUTH2_ACCESS_TOKEN_URI, body.toString(), httpOptions);
   }
 
-  getUserInfoUsingOAuth2Token(userInfoUrl: string, httpOptions: { headers: HttpHeaders })
+  getUserInfoUsingOAuth2Token(userInfoUrl: string)
   {
-    return this.httpClient.get<User>(userInfoUrl,httpOptions)
+    return this.httpClient.get<any>(userInfoUrl)
                .pipe(map(user =>
                {
-                 if (user)
+                 if (user.result[0])
                  {
-                   localStorage.setItem('currentUser', JSON.stringify(user));
+                   localStorage.setItem('currentUser', JSON.stringify(user.result[0]));
                    localStorage.setItem('isLoggedIn', 'true');
-                   this.currentUserSubject.next(user);
+                   this.currentUserSubject.next(user.result[0]);
                  }
-                 return user;
+                 return user.result[0];
                }));
   }
 

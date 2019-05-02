@@ -15,6 +15,7 @@ export class HttpTokenInterceptor implements HttpInterceptor
   {
     let currentUser=this.authService.currentUserValue;
     let accessToken = localStorage.getItem('access_token');
+
     if (currentUser && accessToken)
     {
       request=request.clone(
@@ -24,7 +25,15 @@ export class HttpTokenInterceptor implements HttpInterceptor
           }
         } );
     }
-
+    else if (currentUser === null && accessToken!==null && accessToken!== 'null')
+    {
+      request=request.clone(
+        {
+          setHeaders: {
+            'Authorization': 'Bearer ' + accessToken
+          }
+        } );
+    }
     return next.handle( request );
   }
 }

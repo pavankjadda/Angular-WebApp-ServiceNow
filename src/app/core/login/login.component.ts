@@ -119,7 +119,7 @@ export class LoginComponent implements OnInit
           'Authorization': 'Bearer ' + accessToken
         })
     };
-    this.authService.getUserInfoUsingOAuth2Token(userInfoUrl,httpOptions).subscribe(
+    this.authService.getUserInfoUsingOAuth2Token(userInfoUrl).subscribe(
       userObject =>
       {
         this.router.navigate(['/home']);
