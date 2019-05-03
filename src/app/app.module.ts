@@ -14,6 +14,7 @@ import {HomeComponent} from './layouts/home/home.component';
 import {LayoutModule} from './layouts/layout.module';
 import {PageNotFoundComponent} from './layouts/pagenotfound/pagenotfound.component';
 import {IncidentModule} from './incident/incident.module';
+import {IndicatorModule} from './indicator/indicator.module';
 
 
 @NgModule( {
@@ -29,6 +30,7 @@ import {IncidentModule} from './incident/incident.module';
     ApiModule,
     AccountModule,
     IncidentModule,
+    IndicatorModule,
     AppRoutingModule
   ],
 

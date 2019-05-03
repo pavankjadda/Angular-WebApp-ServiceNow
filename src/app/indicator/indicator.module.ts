@@ -5,7 +5,6 @@ import {IndicatorListComponent} from './indicator/indicator-list/indicator-list.
 import {IndicatorViewComponent} from './indicator/indicator-view/indicator-view.component';
 import {IndicatorHomeComponent} from './indicator/indicator-home/indicator-home.component';
 import {IndicatorTypeComponent} from './indicator-type/indicator-type.component';
-import {RouterModule} from '@angular/router';
 import {IndicatorRoutingModule} from './indicator-routing.module';
 
 @NgModule({
@@ -16,7 +15,6 @@ import {IndicatorRoutingModule} from './indicator-routing.module';
                 IndicatorTypeComponent],
   imports: [
     CommonModule,
-    RouterModule,
     IndicatorRoutingModule
   ]
 })
