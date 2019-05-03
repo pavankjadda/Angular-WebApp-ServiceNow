@@ -3,6 +3,7 @@ import {IncidentService} from '../service/incident.service';
 import {Router} from '@angular/router';
 import {INCIDENT_API_URL, SERVER_API_URL} from '../../../app.constants';
 import {Incident} from '../model/incident';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-incident-list',
@@ -16,6 +17,7 @@ export class IncidentListComponent implements OnInit
   incident: Incident;
 
   constructor(private incidentService: IncidentService,
+              private spinner:NgxSpinnerService,
               private router: Router)
   {
 
@@ -23,11 +25,11 @@ export class IncidentListComponent implements OnInit
 
   ngOnInit()
   {
-    this.getIncidents();
 
+    this.getIncidents();
     this.cols = [
       { field: 'incident_id', header: 'Incident Id' },
-      { field: 'ticket_status', header: 'Incident Status' },
+      { field: 'ticket_status', header: 'Incident Status'},
       { field: 'ticket_coa', header: 'Incident COA' },
       { field: 'complted_indicator_count', header: 'Indicator Count'},
       { field: 'urgency_rank', header: 'Urgency Rank' },
@@ -38,18 +40,22 @@ export class IncidentListComponent implements OnInit
 
   private getIncidents()
   {
+      this.spinner.show();
       const incidentsApiUrl=SERVER_API_URL+INCIDENT_API_URL;
       this.incidentService.getIncidents(incidentsApiUrl).subscribe(
         data=>
         {
           // @ts-ignore
           this.incidents=data.result;
+          this.spinner.hide();
         },
         error1 =>
         {
           console.log('Failed to load incidents');
+          this.spinner.hide();
         }
       );
+
   }
 
   incidentsDataAvailable():boolean
