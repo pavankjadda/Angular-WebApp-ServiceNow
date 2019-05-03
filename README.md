@@ -89,6 +89,12 @@ export const INCIDENT_API_URL = 'api/now/table/x_19668_halo_incident';
 ```
 3. Download the [Allow-Control-Allow-Origin extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en)
  to prevent Allow-Control-Allow-Origin errors
-4. 
-
-
+4. Start the Angular web app with the following command
+```
+$ ng serve --watch
+```
+5. Go to [http://localhost:4200](http://localhost:4200) and login with your credentials
+6. Click on **Incidents menu** to see list of options for incidents
+7. Select **Incidents list** to see list of incidents and **Edit** or **View** to see incident data
+8. Develop and add new components using Angular code
+9. By default localhost runs on **http** and data is not encrypted. Use [Edge Encryption](https://docs.servicenow.com/bundle/london-servicenow-platform/page/administer/edge-encryption/concept/c_EdgeEncryptionOverview.html) to encrypt data between ServiceNow instance and Angular WebApp
