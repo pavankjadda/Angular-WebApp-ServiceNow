@@ -12,13 +12,12 @@ export class IncidentService
 
   getIncidents(url)
   {
-    return this.httpClient.get<Incident[]>(url);
+    return this.httpClient.get<any[]>(url);
   }
 
   createIncident(url, incident)
   {
       return this.httpClient.post(url,incident);
-    //return this.httpClient.put(url,httpOptions,incident);
   }
 
   getIncidentDetails(url)

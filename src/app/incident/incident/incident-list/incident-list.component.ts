@@ -12,6 +12,7 @@ import {Incident} from '../model/incident';
 export class IncidentListComponent implements OnInit
 {
   incidents:Array<Incident>;
+  cols: any[];
 
   constructor(private incidentService: IncidentService,
               private router: Router)
@@ -30,12 +31,17 @@ export class IncidentListComponent implements OnInit
       this.incidentService.getIncidents(incidentsApiUrl).subscribe(
         data=>
         {
-          this.incidents=data;
+          this.incidents=data.result;
         },
         error1 =>
         {
           console.log('Failed to load incidents');
         }
       );
+  }
+
+  incidentsDataAvailable():boolean
+  {
+    return this.incidents!==undefined;
   }
 }
