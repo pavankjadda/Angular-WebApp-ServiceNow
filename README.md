@@ -94,7 +94,7 @@ export const INCIDENT_API_URL = 'api/now/table/x_19668_halo_incident';
 $ ng serve --watch
 ```
 5. Go to [http://localhost:4200](http://localhost:4200) and login with your credentials
-6. Click on **Incidents menu** to see list of options for incidents
+6. Click on **Incidents** menu to see list of options for incidents
 7. Select **Incidents list** to see list of incidents and click on **Edit** or **View** to see incident data
-8. Develop and add new components using Angular code
+8. Add new components and modules based on your requiremnts
 9. By default Angular app runs on **http** protocol and data is not encrypted. Use [Edge Encryption](https://docs.servicenow.com/bundle/london-servicenow-platform/page/administer/edge-encryption/concept/c_EdgeEncryptionOverview.html) to encrypt data between ServiceNow instance and Angular WebApp
