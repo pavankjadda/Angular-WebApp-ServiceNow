@@ -1,32 +1,41 @@
-<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" color="#fff" size="large" type="ball-elastic-dots"></ngx-spinner>
+<p-table [columns]="cols" [value]="incidents" [paginator]="true" [rows]="10">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{col.header}}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns">
+        {{rowData[col.field]}}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
 
-<div class="container container-fluid">
-  <h3 style="text-align: center" > Products List</h3>
-  <div *ngIf="incidentsDataAvailable()">
-    <table class="table table-bordered">
-      <tr style="text-align: center" >
-        <th> Incident Id</th>
-        <th>Incident Status</th>
-        <th>Incident Type</th>
-        <th>Urgency </th>
-        <th>Indicator Count</th>
-        <th>Created Date</th>
-        <th>Updated Date</th>
-      </tr>
-
-      <tr *ngFor="let incident of (incidents)" style="text-align: center">
-        <td><a [routerLink]="['/incident', incident.incident_id]">{{incident.incident_id}}</a></td>
-        <td>{{incident.ticket_status}}</td>
-        <td>{{incident.incident_type.display_value}}</td>
-        <td>{{incident.urgency_rank}}</td>
-        <td>{{incident.sys_created_on}}</td>
-        <td>{{incident.sys_updated_on}}</td>
-      </tr>
-    </table>
-
-    <div style="text-align: center">
-      <a [routerLink]="['/incident']" style="margin-right: 30px">Back</a>
-    </div>
-  </div>
-
-</div>
+<h3 class="first">Incidents</h3>
+<p-table #dt1 [columns]="cols" [value]="incidents" [paginator]="true" [rows]="10" dataKey="vin" [resizableColumns]="true" [reorderableColumns]="true"
+         selectionMode="single" [(selection)]="incident" stateStorage="session" stateKey="statedemo-session">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns" [pSortableColumn]="col.field" pResizableColumn pReorderableColumn>
+        {{col.header}}
+        <p-sortIcon [field]="col.field"></p-sortIcon>
+      </th>
+    </tr>
+    <tr>
+      <th *ngFor="let col of columns" [ngSwitch]="col.field" class="ui-fluid">
+        <input pInputText type="text" (input)="dt1.filter($event.target, col.field, col.filterMatchMode)" [value]="dt1.filters[col.field]?.value">
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr [pSelectableRow]="rowData">
+      <td *ngFor="let col of columns">
+        {{rowData[col.field]}}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

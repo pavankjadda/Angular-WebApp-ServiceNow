@@ -13,6 +13,7 @@ export class IncidentListComponent implements OnInit
 {
   incidents:Array<Incident>;
   cols: any[];
+  incident: Incident;
 
   constructor(private incidentService: IncidentService,
               private router: Router)
@@ -23,6 +24,16 @@ export class IncidentListComponent implements OnInit
   ngOnInit()
   {
     this.getIncidents();
+
+    this.cols = [
+      { field: 'incident_id', header: 'Incident Id' },
+      { field: 'ticket_status', header: 'Incident Status' },
+      { field: 'ticket_coa', header: 'Incident COA' },
+      { field: 'complted_indicator_count', header: 'Indicator Count'},
+      { field: 'urgency_rank', header: 'Urgency Rank' },
+      { field: 'sys_created_on', header: 'Created Date' },
+      { field: 'sys_updated_on', header: 'Last Updated' }
+    ];
   }
 
   private getIncidents()
@@ -31,6 +42,7 @@ export class IncidentListComponent implements OnInit
       this.incidentService.getIncidents(incidentsApiUrl).subscribe(
         data=>
         {
+          // @ts-ignore
           this.incidents=data.result;
         },
         error1 =>
