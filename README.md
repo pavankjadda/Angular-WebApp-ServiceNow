@@ -9,14 +9,14 @@ Angular 7 web application developed to replace Service Portal on ServiceNow. It 
 4. Use ServiceNow as REST API backend
 
 
-## Technologies Used
+### Technologies Used
 1. Angular 7.x
 2. Bootstrap 4.x
 3. ServiceNow Madrid
 4. OAuth2.0
 5. Others 
 
-### Configure ServiceNow backend
+## Configure ServiceNow backend
 1. Get ServiceNow [developer instance](https://developer.servicenow.com/app.do#!/dashboard?v=madrid) of you do not have one
 2. Follow the instructions from [ServiceNow docs](https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/task/t_SettingUpOAuth.html) to activate the OAuth2.0 plugin
 3. Once activated, search for `oauth` and select `Application Registries` to create new OAuth client
@@ -73,11 +73,22 @@ $ curl -d "grant_type=password&client_id=<Client Id>&client_secret=<Client secre
 
 
 
-#### How to  Run Angular App?
-##### Development server
+## How to  Run Angular App?
+1. Clone [this repository](https://github.com/pavankjadda/Angular7-WebApp-ServiceNow) into your local machine and open in WebStorm or VS Code
+2. Open the file **src/app/app.constants.ts** and change details based on your OAuth client and Scripted REST API detail
+```typescript
+export const SERVER_API_URL = 'https://dev81909.service-now.com/';
+export const USER_INFO_URL = 'api/x_19668_halo/user_info';
 
-Run `ng serve --watch` to run this on local machine. Navigate to `http://localhost:4200/`
+export const OAUTH2_CLIENT_ID= '3c76622bc581b30082098914f97ee08e';
+export const OAUTH2_CLIENT_SECRET= 'password12345';
+export const OAUTH2_ACCESS_TOKEN_URI = SERVER_API_URL + 'oauth_token.do';
 
-##### Build
+export const INCIDENT_API_URL = 'api/now/table/x_19668_halo_incident';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+3. Download the [Allow-Control-Allow-Origin extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en)
+ to prevent Allow-Control-Allow-Origin errors
+4. 
+
+
