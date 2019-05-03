@@ -10,6 +10,7 @@ import {IncidentRoutingModule} from './incident-routing.module';
 import {TableModule} from 'primeng/table';
 import {DropdownModule, InputTextModule} from 'primeng/primeng';
 import {NgxSpinnerModule} from 'ngx-spinner';
+import {IncidentTypeComponent} from './incident-type/incident-type.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {NgxSpinnerModule} from 'ngx-spinner';
     IncidentHomeComponent,
     IncidentEditComponent,
     IncidentViewComponent,
-    IncidentNewComponent],
+    IncidentNewComponent,
+    IncidentTypeComponent],
   imports: [
     CommonModule,
     IncidentRoutingModule,

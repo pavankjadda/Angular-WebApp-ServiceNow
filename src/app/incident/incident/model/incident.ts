@@ -1,5 +1,5 @@
 import {Department} from './department';
-import {IncidentType} from './incident-type';
+import {IncidentType} from '../../incident-type/model/incident-type';
 import {SubAgency} from './subagency';
 
 export class Incident
