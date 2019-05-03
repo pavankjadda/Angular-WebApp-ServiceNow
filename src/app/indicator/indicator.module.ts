@@ -8,11 +8,12 @@ import {IndicatorTypeComponent} from './indicator-type/indicator-type.component'
 import {IndicatorRoutingModule} from './indicator-routing.module';
 
 @NgModule({
-  declarations: [IndicatorComponent,
-                IndicatorListComponent,
-                IndicatorViewComponent,
-                IndicatorHomeComponent,
-                IndicatorTypeComponent],
+  declarations: [
+    IndicatorComponent,
+    IndicatorListComponent,
+    IndicatorViewComponent,
+    IndicatorHomeComponent,
+    IndicatorTypeComponent],
   imports: [
     CommonModule,
     IndicatorRoutingModule

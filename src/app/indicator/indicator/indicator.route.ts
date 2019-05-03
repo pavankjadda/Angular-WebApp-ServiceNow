@@ -3,6 +3,7 @@ import {UserAuthGuard} from '../../core/guards/user-auth.guard';
 import {IndicatorComponent} from './indicator.component';
 import {IndicatorHomeComponent} from './indicator-home/indicator-home.component';
 import {IndicatorViewComponent} from './indicator-view/indicator-view.component';
+import {IndicatorListComponent} from './indicator-list/indicator-list.component';
 
 
 export const indicatorManagementRoute: Routes=[
@@ -13,7 +14,7 @@ export const indicatorManagementRoute: Routes=[
     children: [
       {
         path: 'list',
-        component: IndicatorComponent
+        component: IndicatorListComponent
       },
       {
         path: ':id',

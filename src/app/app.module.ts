@@ -29,8 +29,8 @@ import {IndicatorModule} from './indicator/indicator.module';
     CoreModule,
     ApiModule,
     AccountModule,
-    IncidentModule,
     IndicatorModule,
+    IncidentModule,
     AppRoutingModule
   ],
 
