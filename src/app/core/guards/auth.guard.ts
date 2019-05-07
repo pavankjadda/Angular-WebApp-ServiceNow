@@ -38,9 +38,22 @@ export class AuthGuard implements CanActivate
     return false;
   }
 
+  hasItilRole()
+  {
+    let userRoles: Array<Role>=JSON.parse( localStorage.getItem( 'currentUser' ) ).roles;
+    for(let role of userRoles)
+    {
+      if(role.name==='itil')
+      {
+        return true;
+      }
+
+    }
+    return false;
+  }
   private checkLogin(url: string): boolean
   {
-    if(AuthService.isUserLoggedIn()&&this.hasAdminRole())
+    if(AuthService.isUserLoggedIn()&&this.hasItilRole())
     {
       return true;
     }

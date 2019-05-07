@@ -28,11 +28,13 @@ export class IncidentListComponent implements OnInit
 
     this.getIncidents();
     this.cols = [
-      { field: 'incident_id', header: 'Incident Id' },
-      { field: 'ticket_status', header: 'Incident Status'},
-      { field: 'ticket_coa', header: 'Incident COA' },
-      { field: 'complted_indicator_count', header: 'Indicator Count'},
-      { field: 'urgency_rank', header: 'Urgency Rank' },
+      { field: 'number', header: 'Incident Id' },
+      { field: 'state', header: 'Incident State'},
+      { field: 'category', header: 'Category' },
+      { field: 'subcategory', header: 'Subcategory'},
+      { field: 'priority', header: 'Priority' },
+      { field: 'assigned_to', header: 'Assigned To' },
+      { field: 'assignment_group', header: 'Assignment Group' },
       { field: 'sys_created_on', header: 'Created Date' },
       { field: 'sys_updated_on', header: 'Last Updated' }
     ];
