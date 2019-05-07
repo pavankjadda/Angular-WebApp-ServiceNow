@@ -18,8 +18,10 @@ Angular 7 web application developed to replace Service Portal on ServiceNow. It 
 
 ## Configure ServiceNow backend
 1. Get ServiceNow [developer instance](https://developer.servicenow.com/app.do#!/dashboard?v=madrid) of you do not have one
-2. Follow the instructions from [ServiceNow docs](https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/task/t_SettingUpOAuth.html) to activate the OAuth2.0 plugin
-3. Once activated, search for `oauth` and select `Application Registries` to create new OAuth client
+2. Follow the instructions from [ServiceNow docs](https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/task/t_SettingUpOAuth.html) to activate the OAuth2.0 plugin or use below steps
+    * Search for `plugins` from application menus and select it. It will show all the applications
+    * Search for `com.snc.platform.security.oauth` and you should see **OAuth 2.0** plugin and click on **Install**
+3. Once activated, search for `oauth` in application menus and select `Application Registries` to create new OAuth client
 4. Select **Create an OAuth API endpoint for external clients** and fill the client details. See [this](https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/task/t_CreateEndpointforExternalClients.html#t_CreateEndpointforExternalClients) for more information
 5. Make sure the user has REST API access and assigned `snc_platform_rest_api_access` role
 6. Test the created OAuth client with Postman or curl. 
