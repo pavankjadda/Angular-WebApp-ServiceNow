@@ -25,7 +25,6 @@ export class IncidentListComponent implements OnInit
 
   ngOnInit()
   {
-
     this.getIncidents();
     this.cols = [
       { field: 'number', header: 'Incident Id' },
