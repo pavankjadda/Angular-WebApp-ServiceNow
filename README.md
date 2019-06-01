@@ -18,8 +18,10 @@ Angular 7 web application developed to replace Service Portal on ServiceNow. It 
 
 ## Configure ServiceNow backend
 1. Get ServiceNow [developer instance](https://developer.servicenow.com/app.do#!/dashboard?v=madrid) of you do not have one
-2. Follow the instructions from [ServiceNow docs](https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/task/t_SettingUpOAuth.html) to activate the OAuth2.0 plugin
-3. Once activated, search for `oauth` and select `Application Registries` to create new OAuth client
+2. Follow the instructions from [ServiceNow docs](https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/task/t_SettingUpOAuth.html) to activate the OAuth2.0 plugin or use below steps
+    * Search for `plugins` from application menus and select it. It will show all the applications
+    * Search for `com.snc.platform.security.oauth` and you should see **OAuth 2.0** plugin and click on **Install**
+3. Once activated, search for `oauth` in application menus and select `Application Registries` to create new OAuth client
 4. Select **Create an OAuth API endpoint for external clients** and fill the client details. See [this](https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/task/t_CreateEndpointforExternalClients.html#t_CreateEndpointforExternalClients) for more information
 5. Make sure the user has REST API access and assigned `snc_platform_rest_api_access` role
 6. Test the created OAuth client with Postman or curl. 
@@ -94,7 +96,7 @@ export const INCIDENT_API_URL = 'api/now/table/x_19668_halo_incident';
 $ ng serve --watch
 ```
 5. Go to [http://localhost:4200](http://localhost:4200) and login with your credentials
-6. Click on **Incidents menu** to see list of options for incidents
+6. Click on **Incidents** menu to see list of options for incidents
 7. Select **Incidents list** to see list of incidents and click on **Edit** or **View** to see incident data
-8. Develop and add new components using Angular code
+8. Add new components and modules based on your requiremnts
 9. By default Angular app runs on **http** protocol and data is not encrypted. Use [Edge Encryption](https://docs.servicenow.com/bundle/london-servicenow-platform/page/administer/edge-encryption/concept/c_EdgeEncryptionOverview.html) to encrypt data between ServiceNow instance and Angular WebApp
