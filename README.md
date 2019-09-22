@@ -17,7 +17,7 @@ Angular 8 web application developed to replace Service Portal on ServiceNow. It 
 5. Others 
 
 ## Configure ServiceNow backend
-1. Get ServiceNow [developer instance](https://developer.servicenow.com/app.do#!/dashboard?v=madrid) of you do not have one
+1. Get ServiceNow [developer instance](https://developer.servicenow.com/app.do#!/dashboard?v=madrid) if you do not have one
 2. Follow the instructions from [ServiceNow docs](https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/task/t_SettingUpOAuth.html) to activate the OAuth2.0 plugin or use below steps
     * Search for `plugins` from application menus and select it. It will show all the applications
     * Search for `com.snc.platform.security.oauth` and you should see **OAuth 2.0** plugin and click on **Install**
