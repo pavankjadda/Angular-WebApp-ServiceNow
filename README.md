@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.com/pavankjadda/Angular-WebApp-ServiceNow.svg?branch=master)](https://github.com/pavankjadda/Angular-WebApp-ServiceNow)
+
 # Angular 8 web app with ServiceNow backend
 
 ## What's this?
