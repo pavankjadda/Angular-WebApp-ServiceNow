@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.com/pavankjadda/Angular-WebApp-ServiceNow.svg?branch=master)](https://travis-ci.com/pavankjadda/Angular-WebApp-ServiceNow)
 
-# Angular 8 web app with ServiceNow backend
+# Angular 9 web app with ServiceNow backend
 
 ## What's this?
-Angular 8 web application developed to replace Service Portal on ServiceNow. It offers several benefits when compared native Service Portal
+Angular 9 web application developed to replace Service Portal on ServiceNow. It offers several benefits when compared native Service Portal
 1. Angular is widely used framework and offers responsive single page applications (SPA)
 2. No need to wait for ServiceNow to update their instance to Latest Angular version or Bootstrap version 
 2. No need to hack ServicePortal widgets and spend hours on fixing collisions between ServiceNow libraries and your custom CSS and JS libraries.
@@ -12,7 +12,7 @@ Angular 8 web application developed to replace Service Portal on ServiceNow. It 
 
 
 ### Technologies Used
-1. Angular 8.x
+1. Angular 9.x
 2. Bootstrap 4.x
 3. ServiceNow Madrid
 4. OAuth2.0
