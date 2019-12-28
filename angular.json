@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SpringTestingUI": {
+    "angular-webapp-servicenow": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SpringTestingUI",
+            "outputPath": "dist/angular-webapp-servicenow",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SpringTestingUI:build"
+            "browserTarget": "angular-webapp-servicenow:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SpringTestingUI:build:production"
+              "browserTarget": "angular-webapp-servicenow:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SpringTestingUI:build"
+            "browserTarget": "angular-webapp-servicenow:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "SpringTestingUI-e2e": {
+    "angular-webapp-servicenow-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SpringTestingUI:serve"
+            "devServerTarget": "angular-webapp-servicenow:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SpringTestingUI:serve:production"
+              "devServerTarget": "angular-webapp-servicenow:serve:production"
             }
           }
         },
@@ -259,5 +259,5 @@
       }
     }
   },
-  "defaultProject": "SpringTestingUI"
+  "defaultProject": "angular-webapp-servicenow"
 }
