@@ -14,7 +14,7 @@ Angular 9 web application developed to replace Service Portal on ServiceNow. It 
 ### Technologies Used
 1. Angular 9.x
 2. Bootstrap 4.x
-3. ServiceNow Madrid
+3. ServiceNow NewYork
 4. OAuth2.0
 5. Others 
 
