@@ -17,9 +17,6 @@ branches:
   only:
     - /.*/
 
-before_install:
-  - sudo apt-get update
-
 install:
   - npm install -g @angular/cli
   - npm install
