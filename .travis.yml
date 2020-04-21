@@ -4,21 +4,13 @@ sudo: required
 
 language: node_js
 node_js:
-  - "13.2.0"
-
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+  - "13"
 
 branches:
   only:
-    - /.*/
+    - master
 
 install:
-  - npm install -g @angular/cli
   - npm install
 
 jobs:
@@ -27,12 +19,11 @@ jobs:
     - stage: Build App
       if: branch = master
       script:
-      - ng --version
-      - ng build
+      - ng build --prod
 
 
 
 notifications:
   email:
-    on_failure: always
+    on_failure: never
     on_success: never
