@@ -91,7 +91,7 @@ export const OAUTH2_ACCESS_TOKEN_URI = SERVER_API_URL + 'oauth_token.do';
 export const INCIDENT_API_URL = 'api/now/table/x_19668_halo_incident';
 
 ```
-3. Download the [Allow-Control-Allow-Origin extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en)
+3. Download the [Allow-Control-Allow-Origin extension](https://chrome.google.com/webstore/detail/cross-domain-cors/mjhpgnbimicffchbodmgfnemoghjakai/related?hl=en)
  to prevent Allow-Control-Allow-Origin errors
 4. Start the Angular web app with the following command
 ```
