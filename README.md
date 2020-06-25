@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.com/pavankjadda/Angular-WebApp-ServiceNow.svg?branch=master)](https://travis-ci.com/pavankjadda/Angular-WebApp-ServiceNow)
 
-# Angular 9 web app with ServiceNow backend
+# Angular 10 web app with ServiceNow backend
 
 ## What's this?
-Angular 9 web application developed to replace Service Portal on ServiceNow. It offers several benefits when compared native Service Portal
+Angular 10 web application developed to replace Service Portal on ServiceNow. It offers several benefits when compared native Service Portal
 1. Angular is widely used framework and offers responsive single page applications (SPA)
 2. No need to wait for ServiceNow to update their instance to Latest Angular version or Bootstrap version 
 2. No need to hack ServicePortal widgets and spend hours on fixing collisions between ServiceNow libraries and your custom CSS and JS libraries.
@@ -12,7 +12,7 @@ Angular 9 web application developed to replace Service Portal on ServiceNow. It 
 
 
 ### Technologies Used
-1. Angular 9.x
+1. Angular 10.x
 2. Bootstrap 4.x
 3. ServiceNow NewYork
 4. OAuth2.0
@@ -78,7 +78,7 @@ $ curl -d "grant_type=password&client_id=<Client Id>&client_secret=<Client secre
 
 
 ## How to  Run Angular App?
-1. Clone [this repository](https://github.com/pavankjadda/Angular7-WebApp-ServiceNow) into your local machine and open in WebStorm or VS Code
+1. Clone [this repository](https://github.com/pavankjadda/Angular-WebApp-ServiceNow) into your local machine and open in WebStorm or VS Code
 2. Open the file **src/app/app.constants.ts** and change details based on your OAuth client and Scripted REST API detail
 ```typescript
 export const SERVER_API_URL = 'https://dev81909.service-now.com/';
