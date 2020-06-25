@@ -4,7 +4,8 @@ sudo: required
 
 language: node_js
 node_js:
-  - "13"
+  - "12"
+  - "14"
 
 branches:
   only:
@@ -20,8 +21,6 @@ jobs:
       if: branch = master
       script:
       - ng build --prod
-
-
 
 notifications:
   email:
