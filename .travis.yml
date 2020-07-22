@@ -16,6 +16,10 @@ install:
 
 jobs:
   include:
+    ## Skip Tests
+     - stage: test
+      script: echo "Skipping Tests.."
+      
     ## Build Stage  ##
     - stage: Build App
       script:
