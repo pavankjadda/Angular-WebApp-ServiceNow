@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.com/pavankjadda/Angular-WebApp-ServiceNow.svg?branch=master)](https://travis-ci.com/pavankjadda/Angular-WebApp-ServiceNow)
-[![Build Status](https://travis-ci.com/pavankjadda/Angular-WebApp-ServiceNow.svg?branch=development)](https://travis-ci.com/pavankjadda/Angular-WebApp-ServiceNow)
-
+![Build Project](https://github.com/pavankjadda/Angular-WebApp-ServiceNow/workflows/Build%20Project/badge.svg?branch=master)
 
 # Angular 10 web app with ServiceNow backend
 
