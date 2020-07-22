@@ -18,7 +18,6 @@ jobs:
   include:
     ## Build Stage  ##
     - stage: Build App
-      if: branch = master
       script:
       - ng build --prod
 
