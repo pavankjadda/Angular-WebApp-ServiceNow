@@ -1,7 +1,9 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {NgxSpinnerModule} from 'ngx-spinner';
-import {DropdownModule, InputTextModule, TableModule} from 'primeng';
+import {DropdownModule} from 'primeng/dropdown';
+import {InputTextModule} from 'primeng/inputtext';
+import {TableModule} from 'primeng/table';
 import {IncidentRoutingModule} from './incident-routing.module';
 import {IncidentTypeComponent} from './incident-type/incident-type.component';
 import {IncidentEditComponent} from './incident/incident-edit/incident-edit.component';
