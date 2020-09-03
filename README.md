@@ -1,9 +1,9 @@
 ![Build Project](https://github.com/pavankjadda/Angular-WebApp-ServiceNow/workflows/Build%20Project/badge.svg?branch=master)
 
-# Angular 10 web app with ServiceNow backend
+# Angular web app with ServiceNow backend
 
 ## What's this?
-Angular 10 web application developed to replace Service Portal on ServiceNow. It offers several benefits when compared native Service Portal
+Angular 10+ web application developed to replace Service Portal on ServiceNow. It offers several benefits when compared native Service Portal
 1. Angular is widely used framework and offers responsive single page applications (SPA)
 2. No need to wait for ServiceNow to update their instance to Latest Angular version or Bootstrap version 
 2. No need to hack ServicePortal widgets and spend hours on fixing collisions between ServiceNow libraries and your custom CSS and JS libraries.
@@ -12,19 +12,19 @@ Angular 10 web application developed to replace Service Portal on ServiceNow. It
 
 
 ### Technologies Used
-1. Angular 10.x
+1. Angular 10+
 2. Bootstrap 4.x
-3. ServiceNow NewYork
+3. ServiceNow Paris
 4. OAuth2.0
 5. Others 
 
 ## Configure ServiceNow backend
-1. Get ServiceNow [developer instance](https://developer.servicenow.com/app.do#!/dashboard?v=madrid) if you do not have one
-2. Follow the instructions from [ServiceNow docs](https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/task/t_SettingUpOAuth.html) to activate the OAuth2.0 plugin or use below steps
+1. Get ServiceNow [developer instance](https://developer.servicenow.com/app.do#!/dashboard) if you do not have one
+2. Follow the instructions from [ServiceNow docs](https://docs.servicenow.com/bundle/paris-application-development/page/integrate/outbound-rest/task/t_OAuthDemoCreateProvider.html) to activate the OAuth2.0 plugin or use below steps
     * Search for `plugins` from application menus and select it. It will show all the applications
     * Search for `com.snc.platform.security.oauth` and you should see **OAuth 2.0** plugin and click on **Install**
 3. Once activated, search for `oauth` in application menus and select `Application Registries` to create new OAuth client
-4. Select **Create an OAuth API endpoint for external clients** and fill the client details. See [this](https://docs.servicenow.com/bundle/madrid-platform-administration/page/administer/security/task/t_CreateEndpointforExternalClients.html#t_CreateEndpointforExternalClients) for more information
+4. Select **Create an OAuth API endpoint for external clients** and fill the client details. See [this](https://docs.servicenow.com/bundle/paris-application-development/page/integrate/outbound-rest/task/t_OAuthDemoCreateProvider.html) for more information
 5. Make sure the user has REST API access and assigned `snc_platform_rest_api_access` role
 6. Test the created OAuth client with Postman or curl. 
 ```
