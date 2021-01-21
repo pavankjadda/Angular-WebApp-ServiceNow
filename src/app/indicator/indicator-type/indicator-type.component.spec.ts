@@ -1,4 +1,4 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import {IndicatorTypeComponent} from './indicator-type.component';
 
@@ -6,7 +6,7 @@ describe('IndicatorTypeComponent', () => {
   let component: IndicatorTypeComponent;
   let fixture: ComponentFixture<IndicatorTypeComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ IndicatorTypeComponent ]
     })

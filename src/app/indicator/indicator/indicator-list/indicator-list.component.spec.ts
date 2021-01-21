@@ -1,4 +1,4 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import {IndicatorListComponent} from './indicator-list.component';
 
@@ -6,7 +6,7 @@ describe('IndicatorListComponent', () => {
   let component: IndicatorListComponent;
   let fixture: ComponentFixture<IndicatorListComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ IndicatorListComponent ]
     })
