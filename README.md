@@ -20,12 +20,12 @@ Angular 10+ web application developed to replace Service Portal on ServiceNow. I
 
 ## Configure ServiceNow backend
 1. Get ServiceNow [developer instance](https://developer.servicenow.com/app.do#!/dashboard) if you do not have one
-2. Follow the instructions from [ServiceNow docs](https://docs.servicenow.com/bundle/paris-application-development/page/integrate/outbound-rest/task/t_OAuthDemoCreateProvider.html) to activate the OAuth2.0 plugin or use below steps
+2. If the OAuth plugin not activate, follow the instructions from [ServiceNow docs](https://docs.servicenow.com/bundle/paris-application-development/page/integrate/outbound-rest/task/t_OAuthDemoCreateProvider.html) to activate the OAuth2.0 plugin or use below steps
     * Search for `plugins` from application menus and select it. It will show all the applications
     * Search for `com.snc.platform.security.oauth` and you should see **OAuth 2.0** plugin and click on **Install**
-3. Once activated, search for `oauth` in application menus and select `Application Registries` to create new OAuth client
-4. Select **Create an OAuth API endpoint for external clients** and fill the client details. See [this](https://docs.servicenow.com/bundle/paris-application-development/page/integrate/outbound-rest/task/t_OAuthDemoCreateProvider.html) for more information
-5. Make sure the user has REST API access and assigned `snc_platform_rest_api_access` role
+3. Once activated, search for `oauth` in application menus and select `Application Registries` and Click on `New` button to create new OAuth client
+4. Select **Create an OAuth API endpoint for external clients** from the list and fill the client details. Enter name of the registry as **Angular-Test** and Redirect URL as **http://localhost:4200** and click on **Create** button
+5. Make sure the user has REST API access and assigned `snc_platform_rest_api_access` role. If not refer to ServiceNow user guide and add role to the user.
 6. Test the created OAuth client with Postman or curl. 
 ```
 $ curl -d "grant_type=password&client_id=<Client Id>&client_secret=<Client secret>&username=<UserId>&password=<Password>"   -H "Content-Type: application/x-www-form-urlencoded" https://devxxxxx.service-now.com/oauth_token.do
