@@ -21,6 +21,7 @@ jobs:
       run: |
         npm install -g @angular/cli @angular/core
     - name: Install dependencies
-      run: npm ci
+      run: npm ci && npm i typescript@4.2.4
+      
     - name: Build the app
       run: ng build --prod
