@@ -24,7 +24,7 @@ Angular 10+ web application developed to replace Service Portal on ServiceNow. I
     * Search for `com.snc.platform.security.oauth` and you should see **OAuth 2.0** plugin and click on **Install**
 3. Once activated, search for `oauth` in application menus and select `Application Registries` and Click on `New` button to create new OAuth client
 4. Select **Create an OAuth API endpoint for external clients** from the list and fill the client details. Enter name of the registry as **Angular-Test** and Redirect URL as **http://localhost:4200** and click on **Create** button
-5. Make sure the user has REST API access and assigned `snc_platform_rest_api_access` role. If not refer to ServiceNow user guide and add role to the user.
+5. Make sure the user has REST API access and assigned `snc_platform_rest_api_access` and `admin` role. If not refer to ServiceNow user guide and add role to the user.
 6. Test the created OAuth client with Postman or curl. 
 ```
 $ curl -d "grant_type=password&client_id=<Client Id>&client_secret=<Client secret>&username=<UserId>&password=<Password>"   -H "Content-Type: application/x-www-form-urlencoded" https://devxxxxx.service-now.com/oauth_token.do
@@ -75,7 +75,7 @@ $ curl -d "grant_type=password&client_id=<Client Id>&client_secret=<Client secre
     
     })(request, response);
     ```
-11. This scripted api will be used in Angular App to access user information and roles
+11. This scripted api will be used in Angular App to access user information and roles. Mkae note of **Base API** path that looks like `/api/19668/angulartest`, this will be used in next steps
     
 
 
