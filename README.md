@@ -50,9 +50,13 @@ $ curl -d "grant_type=password&client_id=<Client Id>&client_secret=<Client secre
 ```
 9. Go to ServiceNow instance and search for **Scripted Rest APIs** and select it. Click on **New** and enter **Name** and other details then submit it
 10. Select created  **Scripted Rest API** and create new **Resource** under resources and enter following info
+    
     **HTTP method**: GET 
+    
     **Name**: GetUserDetails 
-    **Script**: 
+    
+    **Script:**
+    
     ```
     (function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) 
      {
