@@ -28,7 +28,7 @@ export class UserAuthGuard implements CanActivate
     let userRoles: Array<Role>=JSON.parse( localStorage.getItem( 'currentUser' ) ).roles;
     for(let role of userRoles)
     {
-      if(role.name==='x_19668_halo.Halo')
+      if(role.name==='admin')
       {
         return true;
       }
