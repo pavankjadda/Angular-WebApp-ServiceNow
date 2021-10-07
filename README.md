@@ -14,9 +14,8 @@ Angular 10+ web application developed to replace Service Portal on ServiceNow. I
 ### Technologies Used
 1. Angular 10+
 2. Bootstrap 4.x
-3. ServiceNow Paris
+3. ServiceNow Paris+
 4. OAuth2.0
-5. Others 
 
 ## Configure ServiceNow backend
 1. Get ServiceNow [developer instance](https://developer.servicenow.com/app.do#!/dashboard) if you do not have one
