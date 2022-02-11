@@ -1,13 +1,11 @@
 
-
-.header {
-    background: #193791;
-    color: #FFFFFF;
+mat-nav-list {
+    margin-top: 20px;
 }
 
-/* This class keeps Login/Logout block to the right */
-.login-block-spacer {
-flex: 1 1 auto;
+.mat-list-item {
+    background: #193791;
+    color: #FFFFFF;
 }
 
 .home-link {

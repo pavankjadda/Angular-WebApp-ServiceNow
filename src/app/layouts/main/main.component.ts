@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../../core/auth/auth.service';
+import {MatDrawerMode} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-main',
@@ -6,8 +8,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  constructor() { }
+  mode = 'side' as MatDrawerMode;
+  opened = true;
+  constructor(public authService:AuthService) { }
 
   ngOnInit() {
   }

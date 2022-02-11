@@ -4,3 +4,19 @@
 @import  "~primeicons/primeicons.css";
 @import  "~primeng/resources/themes/nova/theme.css";
 @import  "~primeng/resources/primeng.min.css";
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+html {
+    word-wrap: break-word;
+    height: 100%;
+}
+
+body {
+    word-wrap: break-word;
+    height: 100%;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif !important;
+    background-color: #f2f2f2;
+    position: relative !important;
+}

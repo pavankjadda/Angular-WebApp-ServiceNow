@@ -13,11 +13,15 @@ import {HttpHeaders} from '@angular/common/http';
 })
 export class LoginComponent implements OnInit
 {
+  //Variables
   message: string;
   loginForm: FormGroup;
   submitted=false;
   returnUrl: string;
   loginFailed: boolean;
+  loading = false;
+  loginFailedMessage = 'Failed to Login, Please try again';
+  hide = true;
 
   constructor(
     private formBuilder: FormBuilder,

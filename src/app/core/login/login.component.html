@@ -1,47 +1,81 @@
-<div>
-  <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" color="#fff" size="large" type="ball-elastic-dots"></ngx-spinner>
+<div class="container login_div">
+  <!-- Login Block -->
+  <div class="row">
+    <div class="col-12">
+      <form
+              (submit)="oauth2Login()"
+              [formGroup]="loginForm"
+              class="mx-auto col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+              style="margin-top: 30px">
+        <mat-card class="mat-elevation-z8">
+          <mat-card-title style="margin-bottom: 30px; text-align: center">Login</mat-card-title>
+          <mat-card-content>
+            <!-- Username -->
+            <div class="row">
+              <mat-form-field appearance="outline" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <mat-label>NIH Username</mat-label>
+                <input
+                        aria-label="Username"
+                        class="username"
+                        formControlName="username"
+                        matInput
+                        name="username"
+                        placeholder="Enter Username"
+                        required
+                        type="text" />
+              </mat-form-field>
+            </div>
+            <div class="row" style="margin-bottom: 30px">
+              <mat-error
+                      *ngIf="loginForm?.get('username')?.touched && loginForm?.get('username')?.hasError('required')"
+                      class="mx-auto col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                NIH Username is required
+              </mat-error>
+            </div>
 
+            <!-- Password -->
+            <div class="row">
+              <mat-form-field appearance="outline" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <mat-label>NIH Password</mat-label>
+                <input
+                        [type]="hide ? 'password' : 'text'"
+                        aria-label="Password"
+                        formControlName="password"
+                        matInput
+                        name="password"
+                        placeholder="Enter Password"
+                        required />
+                <mat-icon (click)="hide = !hide" matSuffix type="button">{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </mat-form-field>
+            </div>
+            <div class="row" style="margin-bottom: 30px">
+              <mat-error
+                      *ngIf="loginForm?.get('password')?.touched && loginForm?.get('password')?.hasError('required')"
+                      class="mx-auto col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                NIH Password is required
+              </mat-error>
+            </div>
 
-  <div class="col-4" style="margin:auto">
-    <h2>Login</h2> <br/>
-    <form [formGroup]="loginForm">
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control"
-               formControlName="username" id="username"
-               type="text"/>
-        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-          <div *ngIf="f.username.errors.required">Username is required</div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input [ngClass]="{ 'is-invalid': submitted && f.password.errors }" class="form-control"
-               formControlName="password" id="password"
-               type="password"/>
-        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-          <div *ngIf="f.password.errors.required">Password is required</div>
-        </div>
-      </div>
-      <div class="form-group">
-        <button (click)="oauth2Login()" class="btn btn-primary">Login</button>
-        <a routerLink="/register" style="margin: 20px">Register</a>
-      </div>
+            <div *ngIf="loginFailed" class="row error" style="color: red">
+              <label class="custom-flex-justify-center" style="color: red">{{ loginFailedMessage }}</label>
+            </div>
 
-      <div class="form-group">
-        <div *ngIf="loginFailed" style="color:red; ">Failed to Login, Please try again</div>
-      </div>
-    </form>
+            <!-- Login button -->
+            <div class="row custom-flex-justify-center" style="margin-top: 30px; margin-bottom: 30px">
+              <button [disabled]="loading" class="button-container login-button" color="primary" mat-raised-button type="submit">
+								<span
+                                        *ngIf="loading"
+                                        aria-hidden="true"
+                                        class="spinner-border spinner-border-sm"
+                                        role="status"
+                                        style="margin-right: 5px"></span>
+                <ng-container *ngIf="!loading">Login</ng-container>
+                <ng-container *ngIf="loading" class="spinner-container row">Logging In</ng-container>
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </form>
+    </div>
   </div>
-
-
 </div>
-
-
-<!--
-<p>{{message}}</p>
-<p>
-  <button (click)="login()" *ngIf="!authService.isLoggedIn">Login</button>
-  <button (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
-</p>
--->

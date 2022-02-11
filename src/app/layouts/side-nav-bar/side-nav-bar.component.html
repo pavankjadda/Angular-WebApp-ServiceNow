@@ -1,0 +1,50 @@
+<!-- Side Nav Bar Body-->
+<ng-container>
+    <!-- Home Section -->
+    <div class="row" style="margin: 0">
+        <a *ngIf="authService.isLoggedIn()" class="custom-flex-justify-center home-link" routerLink="/home">
+            <ng-container matTooltip="Angular Web App">Angular Web App ServiceNow </ng-container>
+        </a>
+    </div>
+    <mat-divider style="margin-top: 14px"></mat-divider>
+
+    <!-- Incidents Section -->
+    <mat-nav-list *ngIf="authService.isLoggedIn()" style="padding-left: 10px">
+        <label class="h5" style="font-weight: bold">Collections</label>
+        <a *ngIf="authService.isLoggedIn()" mat-list-item routerLink="/collection/search">
+            <mat-icon>library_books</mat-icon>
+            Select a Collection
+        </a>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+
+    <!-- Tasks Section -->
+    <mat-nav-list *ngIf="authService.isLoggedIn()" style="padding-left: 10px">
+        <label class="h5" style="font-weight: bold">Surveys</label>
+        <a *ngIf="authService.isLoggedIn()" mat-list-item routerLink="/survey/create">
+            <mat-icon>add</mat-icon>
+            Create New Survey
+        </a>
+        <a *ngIf="authService.isLoggedIn()" mat-list-item routerLink="/survey/my_surveys">
+            <mat-icon>ballot</mat-icon>
+            My Surveys
+        </a>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+
+    <!-- Account section-->
+    <mat-nav-list *ngIf="authService.isLoggedIn()" style="padding-left: 10px">
+        <label class="h5" style="font-weight: bold">Account</label>
+        <a mat-list-item routerLink="/profile">
+            <mat-icon>account_circle</mat-icon>
+            My Profile
+        </a>
+
+        <a mat-list-item routerLink="/logout">
+            <mat-icon>logout</mat-icon>
+            Logout
+        </a>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+
+</ng-container>

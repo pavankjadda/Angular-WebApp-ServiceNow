@@ -1,21 +1,38 @@
-<nav class="navbar navbar-dark bg-dark mb-5">
-  <a class="navbar-brand" routerLink="/">Home</a>
-  <div class="navbar-expand mr-auto">
-    <div *ngIf="isLoggedIn()" class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/incident">Incidents</a>
+<mat-toolbar class="custom-header">
+  <mat-toolbar-row *ngIf="!isLoggedIn()" class="col-12 header">
+    <div class="h4">
+      <a class="custom-flex-justify-center home-link" routerLink="/">
+        <ng-container matTooltip="Angular Web App ServiceNow">Angular Web App ServiceNow
+        </ng-container>
+      </a>
     </div>
-  </div>
 
-  <div class="navbar-expand ml-auto navbar-nav">
-    <div  *ngIf="isLoggedIn()" class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/profile">Profile</a>
-      <a class="nav-item nav-link" routerLink="/logout">Logout</a>
-    </div>
-  </div>
+    <!-- Moves Help block to right -->
+    <span class="login-block-spacer"></span>
 
-  <div class="navbar-expand ml-auto navbar-nav">
-    <div  *ngIf="!isLoggedIn()" class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/login">Login</a>
+    <!-- Help -->
+    <div *ngIf="isLoggedIn() === false">
+      <button (click)="router.navigateByUrl('/help')" mat-button>
+        <mat-icon>help</mat-icon>
+        Help
+      </button>
     </div>
-  </div>
-</nav>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row
+          *ngIf="isLoggedIn()"
+          style="display: flex; flex-direction: row; border-bottom: 1px solid lightgray">
+
+    <!-- Moves Login/Logout block to right -->
+    <span class="login-block-spacer"></span>
+
+    <!-- Login/Logout-->
+    <div *ngIf="isLoggedIn()" id="profile-menu-logout">
+      <button (click)="logout()" mat-button>
+        <mat-icon>logout</mat-icon>
+        Logout
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+

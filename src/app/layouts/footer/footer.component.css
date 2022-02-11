@@ -1,3 +1,33 @@
 .fa-heart {
   color: hotpink;
 }
+
+/****************************** Following CSS keeps footer sticky *****************************************/
+
+/*
+ * Actual Sticky Footer Styles
+ */
+.all-wrap {
+  min-height: 100vh;
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+/*
+ * Make the Component injected by Router Outlet full height:
+ */
+main {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/****************************** End of Footer CSS *****************************************/

@@ -1,5 +1,23 @@
-<app-header></app-header>
-<div class="container">
-  <ng-content></ng-content>
-</div>
-<app-footer></app-footer>
+<!--Header-->
+<mat-sidenav-container>
+  <!-- Side Nav Bar -->
+  <mat-sidenav
+          #sideNav
+          *ngIf="authService.isLoggedIn()"
+          [mode]="mode"
+          [opened]="opened"
+          class="mat-sidenav mat-elevation-z24">
+    <app-side-nav-bar></app-side-nav-bar>
+  </mat-sidenav>
+
+  <!-- Body -->
+  <div class="page-wrap">
+    <app-header></app-header>
+
+    <!-- Main -->
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
+  </div>
+</mat-sidenav-container>

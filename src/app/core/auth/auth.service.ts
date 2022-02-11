@@ -30,6 +30,11 @@ export class AuthService
     return localStorage.getItem( 'isLoggedIn' )==='true';
   }
 
+  isLoggedIn(): boolean
+  {
+    return localStorage.getItem( 'isLoggedIn' )==='true';
+  }
+
   oauthLogin(username: string, password: string)
   {
     const httpOptions={
