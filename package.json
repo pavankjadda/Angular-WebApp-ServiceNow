@@ -3,7 +3,7 @@
   "version": "12.1.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --watch --hmr",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
