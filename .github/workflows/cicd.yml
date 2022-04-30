@@ -1,4 +1,4 @@
-name: Build Project
+name: CICD
 
 on: [push]
 
@@ -8,8 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [14.x]
-
+        node-version: [18.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -21,7 +20,7 @@ jobs:
       run: |
         npm install -g @angular/cli @angular/core
     - name: Install dependencies
-      run: npm ci && npm i typescript@4.2.4
-      
+      run: npm ci --force
+
     - name: Build the app
       run: ng build --prod
