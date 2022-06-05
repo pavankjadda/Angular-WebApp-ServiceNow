@@ -229,7 +229,6 @@
       }
     }
   },
-  "defaultProject": "angular-webapp-servicenow",
   "cli": {
     "analytics": false
   }
