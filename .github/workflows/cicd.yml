@@ -20,4 +20,4 @@ jobs:
       run: npm ci --force
 
     - name: Build the app
-      run: ng build --prod
+      run: npm run build --prod
