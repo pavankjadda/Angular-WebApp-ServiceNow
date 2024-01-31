@@ -1,4 +1,4 @@
-![Build Project](https://github.com/pavankjadda/Angular-WebApp-ServiceNow/workflows/Build%20Project/badge.svg?branch=master)
+[![Build](https://github.com/pavankjadda/Angular-WebApp-ServiceNow/actions/workflows/cicd.yml/badge.svg?branch=master)](https://github.com/pavankjadda/Angular-WebApp-ServiceNow/actions/workflows/cicd.yml)
 
 # Angular web app with ServiceNow backend
 
