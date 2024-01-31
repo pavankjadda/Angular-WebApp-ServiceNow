@@ -10,8 +10,6 @@ import { MainComponent } from "./layouts/main/main.component";
   imports: [RouterLink, RouterOutlet, MainComponent],
 })
 export class AppComponent {
-  title = "Home";
-
   constructor() {
     console.log(environment.production); // Logs false for default environment
   }
