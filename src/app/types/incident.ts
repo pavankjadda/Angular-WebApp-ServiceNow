@@ -1,7 +1,6 @@
-import {SysUser} from './sys-user';
+import { SysUser } from "./sys-user";
 
-export class Incident
-{
+export class Incident {
   number: string;
   priority: string;
   state: string;
@@ -23,10 +22,8 @@ export class Incident
   closed_by: SysUser;
   resolved_by: SysUser;
 
-  sys_updated_by:string;
-  sys_created_on:string;
-  sys_updated_on:string;
-  sys_created_by:string;
-
+  sys_updated_by: string;
+  sys_created_on: string;
+  sys_updated_on: string;
+  sys_created_by: string;
 }
-

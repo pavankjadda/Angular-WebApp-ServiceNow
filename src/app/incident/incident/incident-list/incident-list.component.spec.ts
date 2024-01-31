@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import {IncidentListComponent} from './incident-list.component';
+import { IncidentListComponent } from "./incident-list.component";
 
-describe('IncidentListComponent', () => {
+describe("IncidentListComponent", () => {
   let component: IncidentListComponent;
   let fixture: ComponentFixture<IncidentListComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [IncidentListComponent]
-})
-    .compileComponents();
+      imports: [IncidentListComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('IncidentListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

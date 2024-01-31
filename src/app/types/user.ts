@@ -1,7 +1,6 @@
-import {Role} from '../../role/model/role';
+import { Role } from "./role";
 
-export class User
-{
+export class User {
   displayName: string;
   sysId: string;
   username: string;

@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import {IndicatorViewComponent} from './indicator-view.component';
+import { IndicatorViewComponent } from "./indicator-view.component";
 
-describe('IndicatorViewComponent', () => {
+describe("IndicatorViewComponent", () => {
   let component: IndicatorViewComponent;
   let fixture: ComponentFixture<IndicatorViewComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [IndicatorViewComponent]
-})
-    .compileComponents();
+      imports: [IndicatorViewComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('IndicatorViewComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

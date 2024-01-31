@@ -1,9 +1,6 @@
 import { enableProdMode, importProvidersFrom } from "@angular/core";
 import { environment } from "./environments/environment";
 import { AppComponent } from "./app/app.component";
-import { IncidentModule } from "./app/incident/incident.module";
-import { IndicatorModule } from "./app/indicator/indicator.module";
-import { CoreModule } from "./app/core/core.module";
 import {
   provideHttpClient,
   withInterceptorsFromDi,
@@ -34,9 +31,6 @@ bootstrapApplication(AppComponent, {
       CommonModule,
       FormsModule,
       ReactiveFormsModule,
-      CoreModule,
-      IndicatorModule,
-      IncidentModule,
     ),
     provideRouter(
       routes,

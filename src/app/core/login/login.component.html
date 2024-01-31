@@ -1,24 +1,37 @@
 <div>
-  <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" color="#fff" size="large" type="ball-elastic-dots"></ngx-spinner>
+  <ngx-spinner
+    bdColor="rgba(51, 51, 51, 0.8)"
+    color="#fff"
+    size="large"
+    type="ball-elastic-dots"
+  ></ngx-spinner>
 
-
-  <div class="col-4" style="margin:auto">
-    <h2>Login</h2> <br/>
+  <div class="col-4" style="margin: auto">
+    <h2>Login</h2>
+    <br />
     <form [formGroup]="loginForm">
       <div class="form-group">
         <label for="username">Username</label>
-        <input [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control"
-               formControlName="username" id="username"
-               type="text"/>
+        <input
+          [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+          class="form-control"
+          formControlName="username"
+          id="username"
+          type="text"
+        />
         <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
           <div *ngIf="f.username.errors.required">Username is required</div>
         </div>
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input [ngClass]="{ 'is-invalid': submitted && f.password.errors }" class="form-control"
-               formControlName="password" id="password"
-               type="password"/>
+        <input
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+          class="form-control"
+          formControlName="password"
+          id="password"
+          type="password"
+        />
         <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
           <div *ngIf="f.password.errors.required">Password is required</div>
         </div>
@@ -29,14 +42,13 @@
       </div>
 
       <div class="form-group">
-        <div *ngIf="loginFailed" style="color:red; ">Failed to Login, Please try again</div>
+        <div *ngIf="loginFailed" style="color: red">
+          Failed to Login, Please try again
+        </div>
       </div>
     </form>
   </div>
-
-
 </div>
-
 
 <!--
 <p>{{message}}</p>

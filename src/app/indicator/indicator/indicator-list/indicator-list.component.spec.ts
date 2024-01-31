@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import {IndicatorListComponent} from './indicator-list.component';
+import { IndicatorListComponent } from "./indicator-list.component";
 
-describe('IndicatorListComponent', () => {
+describe("IndicatorListComponent", () => {
   let component: IndicatorListComponent;
   let fixture: ComponentFixture<IndicatorListComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [IndicatorListComponent]
-})
-    .compileComponents();
+      imports: [IndicatorListComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('IndicatorListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

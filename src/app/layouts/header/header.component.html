@@ -7,14 +7,14 @@
   </div>
 
   <div class="navbar-expand ml-auto navbar-nav">
-    <div  *ngIf="isLoggedIn()" class="navbar-nav">
+    <div *ngIf="isLoggedIn()" class="navbar-nav">
       <a class="nav-item nav-link" routerLink="/profile">Profile</a>
       <a class="nav-item nav-link" routerLink="/logout">Logout</a>
     </div>
   </div>
 
   <div class="navbar-expand ml-auto navbar-nav">
-    <div  *ngIf="!isLoggedIn()" class="navbar-nav">
+    <div *ngIf="!isLoggedIn()" class="navbar-nav">
       <a class="nav-item nav-link" routerLink="/login">Login</a>
     </div>
   </div>

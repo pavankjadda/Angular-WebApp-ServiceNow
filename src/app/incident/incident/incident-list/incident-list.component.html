@@ -1,38 +1,73 @@
-<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" color="#fff" size="large" type="ball-elastic-dots"></ngx-spinner>
+<ngx-spinner
+  bdColor="rgba(51, 51, 51, 0.8)"
+  color="#fff"
+  size="large"
+  type="ball-elastic-dots"
+></ngx-spinner>
 
 <div class="container container-fluid" style="margin-bottom: 100px">
-<h2>Incidents</h2>
-<br>
-<div *ngIf="incidentsDataAvailable()">
-<p-table #dt2 [columns]="cols" [value]="incidents" [paginator]="true" [rows]="10" dataKey="incident_id" [resizableColumns]="true" [reorderableColumns]="true"
-         selectionMode="single" [(selection)]="incident" stateStorage="local" stateKey="statedemo-local">
-  <ng-template pTemplate="header" let-columns>
-    <tr>
-      <th *ngFor="let col of columns" [pSortableColumn]="col.field" pResizableColumn pReorderableColumn>
-        {{col.header}}
-        <p-sortIcon [field]="col.field"></p-sortIcon>
-      </th>
-    </tr>
-    <tr>
-      <th *ngFor="let col of columns" [ngSwitch]="col.field" class="ui-fluid">
-        <label>
-          <input pInputText type="text" (input)="dt2.filter($event.target.value, col.field, col.filterMatchMode)" [value]="dt2.filters[col.field]?.value">
-        </label>
-      </th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-rowData let-columns="columns">
-    <tr [pSelectableRow]="rowData">
-      <td *ngFor="let col of columns">
-        {{rowData[col.field]}}
-      </td>
-    </tr>
-  </ng-template>
-</p-table>
+  <h2>Incidents</h2>
+  <br />
+  <div *ngIf="incidentsDataAvailable()">
+    <p-table
+      #dt2
+      [(selection)]="incident"
+      [columns]="cols"
+      [paginator]="true"
+      [reorderableColumns]="true"
+      [resizableColumns]="true"
+      [rows]="10"
+      [value]="incidents"
+      dataKey="incident_id"
+      selectionMode="single"
+      stateKey="statedemo-local"
+      stateStorage="local"
+    >
+      <ng-template let-columns pTemplate="header">
+        <tr>
+          <th
+            *ngFor="let col of columns"
+            [pSortableColumn]="col.field"
+            pReorderableColumn
+            pResizableColumn
+          >
+            {{ col.header }}
+            <p-sortIcon [field]="col.field"></p-sortIcon>
+          </th>
+        </tr>
+        <tr>
+          <th
+            *ngFor="let col of columns"
+            [ngSwitch]="col.field"
+            class="ui-fluid"
+          >
+            <label>
+              <input
+                (input)="
+                  dt2.filter(
+                    $event.target.value,
+                    col.field,
+                    col.filterMatchMode
+                  )
+                "
+                [value]="dt2.filters[col.field]?.value"
+                pInputText
+                type="text"
+              />
+            </label>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template let-columns="columns" let-rowData pTemplate="body">
+        <tr [pSelectableRow]="rowData">
+          <td *ngFor="let col of columns">
+            {{ rowData[col.field] }}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
 </div>
-
-</div>
-
 
 <!--
 <p-table [columns]="cols" [value]="incidents" [paginator]="true" [rows]="10">

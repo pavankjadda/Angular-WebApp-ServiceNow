@@ -1,5 +1,4 @@
-export class IncidentType
-{
-  display_value:string;
-  link:string;
+export class IncidentType {
+  display_value: string;
+  link: string;
 }

@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import {IndicatorHomeComponent} from './indicator-home.component';
+import { IndicatorHomeComponent } from "./indicator-home.component";
 
-describe('IndicatorHomeComponent', () => {
+describe("IndicatorHomeComponent", () => {
   let component: IndicatorHomeComponent;
   let fixture: ComponentFixture<IndicatorHomeComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [IndicatorHomeComponent]
-})
-    .compileComponents();
+      imports: [IndicatorHomeComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('IndicatorHomeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
