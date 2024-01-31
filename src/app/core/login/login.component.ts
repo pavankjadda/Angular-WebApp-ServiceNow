@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
-import {NgxSpinnerService} from 'ngx-spinner';
 import {AuthService} from '../auth/auth.service';
 import {SERVER_API_URL, USER_INFO_URL} from '../../app.constants';
 import {HttpHeaders} from '@angular/common/http';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-login',

@@ -33,26 +33,17 @@ dependencies:
     specifier: ^17.1.1
     version: 17.1.1(@angular/common@17.1.1)(@angular/core@17.1.1)(@angular/platform-browser@17.1.1)(rxjs@7.8.1)
   bootstrap:
-    specifier: ^5.2.3
-    version: 5.2.3(@popperjs/core@2.11.7)
+    specifier: ^5.3.2
+    version: 5.3.2(@popperjs/core@2.11.8)
   chart.js:
     specifier: ^4.3.0
     version: 4.3.0
-  core-js:
-    specifier: ^3.30.2
-    version: 3.30.2
-  font-awesome:
-    specifier: ^4.7.0
-    version: 4.7.0
   jquery:
     specifier: ^3.6.2
     version: 3.6.2
-  ngx-bootstrap:
-    specifier: ^10.2.0
-    version: 10.2.0(@angular/animations@17.1.1)(@angular/common@17.1.1)(@angular/core@17.1.1)(@angular/forms@17.1.1)(rxjs@7.8.1)
   ngx-spinner:
     specifier: ^16.0.0
-    version: 16.0.0(@angular/common@17.1.1)(@angular/core@17.1.1)
+    version: 16.0.2(@angular/animations@17.1.1)(@angular/common@17.1.1)(@angular/core@17.1.1)
   popper.js:
     specifier: ^1.16.1
     version: 1.16.1
@@ -2367,8 +2358,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@popperjs/core@2.11.7:
-    resolution: {integrity: sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==}
+  /@popperjs/core@2.11.8:
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
   /@rollup/rollup-android-arm-eabi@4.9.6:
@@ -3386,12 +3377,12 @@ packages:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: true
 
-  /bootstrap@5.2.3(@popperjs/core@2.11.7):
-    resolution: {integrity: sha512-cEKPM+fwb3cT8NzQZYEu4HilJ3anCrWqh3CHAok1p9jXqMPsPTBhU25fBckEJHJ/p+tTxTFTsFQGM+gaHpi3QQ==}
+  /bootstrap@5.3.2(@popperjs/core@2.11.8):
+    resolution: {integrity: sha512-D32nmNWiQHo94BKHLmOrdjlL05q1c8oxbtBphQFb9Z5to6eGRDCm0QgeaZ4zFBHzfg2++rqa2JkqCcxDy0sH0g==}
     peerDependencies:
-      '@popperjs/core': ^2.11.6
+      '@popperjs/core': ^2.11.8
     dependencies:
-      '@popperjs/core': 2.11.7
+      '@popperjs/core': 2.11.8
     dev: false
 
   /brace-expansion@1.1.11:
@@ -3573,7 +3564,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /chownr@2.0.0:
@@ -3791,11 +3782,6 @@ packages:
     dependencies:
       browserslist: 4.22.3
     dev: true
-
-  /core-js@3.30.2:
-    resolution: {integrity: sha512-uBJiDmwqsbJCWHAwjrx3cvjbMXP7xD72Dmsn5LOJpiRmE3WbBbN5rCqQ2Qh6Ek6/eOrjlWngEynBWo4VxerQhg==}
-    requiresBuild: true
-    dev: false
 
   /core-util-is@1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
@@ -4697,11 +4683,6 @@ packages:
         optional: true
     dev: true
 
-  /font-awesome@4.7.0:
-    resolution: {integrity: sha512-U6kGnykA/6bFmg1M/oT9EkFeIYv7JlX3bozwQJWiiLz6L0w3F5vBVPxHlwyX/vtNq1ckcpRKOB9f2Qal/VtFpg==}
-    engines: {node: '>=0.10.3'}
-    dev: false
-
   /for-each@0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
     dependencies:
@@ -4770,14 +4751,6 @@ packages:
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
-
-  /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -6280,32 +6253,17 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /ngx-bootstrap@10.2.0(@angular/animations@17.1.1)(@angular/common@17.1.1)(@angular/core@17.1.1)(@angular/forms@17.1.1)(rxjs@7.8.1):
-    resolution: {integrity: sha512-bn5wdvH6QQ2JGu4TgUbozdULBFMxZNPNTgO7dRiosx9FRrFvKcgxkGSgU/xoj+4kP1vgh8zwzaiDfvH/Bfb+Aw==}
+  /ngx-spinner@16.0.2(@angular/animations@17.1.1)(@angular/common@17.1.1)(@angular/core@17.1.1):
+    resolution: {integrity: sha512-MZpOHb3dvSqD6xiEdR+EtOfPY2r1kfA7t5Hv5IVwi7gkbTwVgnqxDWdOYJ/HW1pSZ5iEGhqlJqWg6CysLmNfHQ==}
     peerDependencies:
-      '@angular/animations': ^15.0.0
-      '@angular/common': ^15.0.0
-      '@angular/core': ^15.0.0
-      '@angular/forms': ^15.0.0
-      rxjs: ^6.5.3 || ^7.6.0
+      '@angular/animations': '>=15.0.0'
+      '@angular/common': '>=15.0.0'
+      '@angular/core': '>=15.0.0'
     dependencies:
       '@angular/animations': 17.1.1(@angular/core@17.1.1)
       '@angular/common': 17.1.1(@angular/core@17.1.1)(rxjs@7.8.1)
       '@angular/core': 17.1.1(rxjs@7.8.1)(zone.js@0.14.3)
-      '@angular/forms': 17.1.1(@angular/common@17.1.1)(@angular/core@17.1.1)(@angular/platform-browser@17.1.1)(rxjs@7.8.1)
-      rxjs: 7.8.1
-      tslib: 2.5.0
-    dev: false
-
-  /ngx-spinner@16.0.0(@angular/common@17.1.1)(@angular/core@17.1.1):
-    resolution: {integrity: sha512-t2/Q3mvCXXv/At2jPhTNY6WplzfyBYaJDNQIIgqZ6NYj/v/M/gDO1WCyh/gjXgRdbKIu/ZTwoqnkjMtE1v9FWw==}
-    peerDependencies:
-      '@angular/common': ^15.0.0
-      '@angular/core': ^15.0.0
-    dependencies:
-      '@angular/common': 17.1.1(@angular/core@17.1.1)(rxjs@7.8.1)
-      '@angular/core': 17.1.1(rxjs@7.8.1)(zone.js@0.14.3)
-      tslib: 2.5.0
+      tslib: 2.6.2
     dev: false
 
   /nice-napi@1.0.2:
@@ -8040,7 +7998,6 @@ packages:
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
-    dev: true
 
   /tsutils@3.21.0(typescript@5.3.3):
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
