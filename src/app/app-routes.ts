@@ -15,5 +15,19 @@ export const routes: Routes = [
     path: "logout",
     component: LogoutComponent,
   },
+  {
+    path: "incident",
+    loadChildren: () =>
+      import("src/app/incident/incident.route").then(
+        (m) => m.incidentManagementRoute,
+      ),
+  },
+  {
+    path: "indicator",
+    loadChildren: () =>
+      import("./indicator/indicator.route").then(
+        (m) => m.indicatorManagementRoute,
+      ),
+  },
   { path: "**", component: PageNotFoundComponent },
 ];

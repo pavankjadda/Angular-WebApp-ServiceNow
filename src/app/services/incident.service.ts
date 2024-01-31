@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Incident } from "../../../types/incident";
+import { Incident } from "../types/incident";
 
 @Injectable({
   providedIn: "root",

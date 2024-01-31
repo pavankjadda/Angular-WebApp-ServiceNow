@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { UserAuthGuard } from "../../core/guards/user-auth.guard";
+import { UserAuthGuard } from "../core/guards/user-auth.guard";
 import { IndicatorComponent } from "./indicator.component";
 import { IndicatorHomeComponent } from "./indicator-home/indicator-home.component";
 import { IndicatorViewComponent } from "./indicator-view/indicator-view.component";

@@ -1,11 +1,11 @@
 import { Routes } from "@angular/router";
-import { UserAuthGuard } from "../../core/guards/user-auth.guard";
 import { IncidentComponent } from "./incident.component";
 import { IncidentHomeComponent } from "./incident-home/incident-home.component";
 import { IncidentListComponent } from "./incident-list/incident-list.component";
 import { IncidentViewComponent } from "./incident-view/incident-view.component";
 import { IncidentEditComponent } from "./incident-edit/incident-edit.component";
 import { IncidentNewComponent } from "./incident-new/incident-new.component";
+import { UserAuthGuard } from "../core/guards/user-auth.guard";
 
 export const incidentManagementRoute: Routes = [
   {

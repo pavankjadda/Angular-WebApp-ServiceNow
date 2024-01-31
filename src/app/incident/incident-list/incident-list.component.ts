@@ -1,13 +1,13 @@
 import { Component, OnInit } from "@angular/core";
-import { IncidentService } from "../service/incident.service";
+import { IncidentService } from "../../services/incident.service";
 import { Router } from "@angular/router";
-import { INCIDENT_API_URL, SERVER_API_URL } from "../../../app.constants";
-import { Incident } from "../../../types/incident";
 import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 import { InputTextModule } from "primeng/inputtext";
 import { SharedModule } from "primeng/api";
 import { TableModule } from "primeng/table";
 import { NgFor, NgIf, NgSwitch } from "@angular/common";
+import { Incident } from "../../types/incident";
+import { INCIDENT_API_URL, SERVER_API_URL } from "../../app.constants";
 
 @Component({
   selector: "app-incident-list",

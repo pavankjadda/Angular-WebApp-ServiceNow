@@ -20,8 +20,8 @@ export class HttpTokenInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler,
   ): Observable<HttpEvent<any>> {
-    let currentUser = this.authService.currentUserValue;
-    let accessToken = localStorage.getItem("access_token");
+    const currentUser = this.authService.currentUserValue;
+    const accessToken = localStorage.getItem("access_token");
 
     if (currentUser && accessToken) {
       request = request.clone({
