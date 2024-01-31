@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-webapp-servicenow:build"
+            "buildTarget": "angular-webapp-servicenow:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-webapp-servicenow:build:production"
+              "buildTarget": "angular-webapp-servicenow:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-webapp-servicenow:build"
+            "buildTarget": "angular-webapp-servicenow:build"
           }
         },
         "test": {
@@ -185,18 +185,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "state:build"
+            "buildTarget": "state:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "state:build:production"
+              "buildTarget": "state:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "state:build"
+            "buildTarget": "state:build"
           }
         },
         "test": {
