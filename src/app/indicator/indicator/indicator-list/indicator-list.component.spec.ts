@@ -8,8 +8,8 @@ describe('IndicatorListComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ IndicatorListComponent ]
-    })
+    imports: [IndicatorListComponent]
+})
     .compileComponents();
   }));
 

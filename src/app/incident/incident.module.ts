@@ -14,21 +14,20 @@ import {IncidentViewComponent} from './incident/incident-view/incident-view.comp
 import {IncidentComponent} from './incident/incident.component';
 
 @NgModule({
-  declarations: [
-    IncidentComponent,
-    IncidentListComponent,
-    IncidentHomeComponent,
-    IncidentEditComponent,
-    IncidentViewComponent,
-    IncidentNewComponent,
-    IncidentTypeComponent],
-  imports: [
-    CommonModule,
-    IncidentRoutingModule,
-    TableModule,
-    DropdownModule,
-    InputTextModule,
-    NgxSpinnerModule
-  ]
+    imports: [
+        CommonModule,
+        IncidentRoutingModule,
+        TableModule,
+        DropdownModule,
+        InputTextModule,
+        NgxSpinnerModule,
+        IncidentComponent,
+        IncidentListComponent,
+        IncidentHomeComponent,
+        IncidentEditComponent,
+        IncidentViewComponent,
+        IncidentNewComponent,
+        IncidentTypeComponent
+    ]
 })
 export class IncidentModule { }

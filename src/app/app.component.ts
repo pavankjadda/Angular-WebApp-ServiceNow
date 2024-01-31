@@ -1,17 +1,18 @@
-import {Component} from '@angular/core';
-import {environment} from '../environments/environment.prod';
+import { Component } from "@angular/core";
+import { environment } from "../environments/environment.prod";
+import { RouterLink, RouterOutlet } from "@angular/router";
+import { MainComponent } from "./layouts/main/main.component";
 
 @Component({
-             selector: 'app-root',
-             templateUrl: './app.component.html',
-             styleUrls: ['./app.component.css']
-           })
-export class AppComponent
-{
-  title = 'Home';
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  standalone: true,
+  imports: [RouterLink, RouterOutlet, MainComponent],
+})
+export class AppComponent {
+  title = "Home";
 
-  constructor()
-  {
+  constructor() {
     console.log(environment.production); // Logs false for default environment
   }
 }

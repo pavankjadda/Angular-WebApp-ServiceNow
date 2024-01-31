@@ -1,12 +1,57 @@
-import {enableProdMode} from '@angular/core';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-
-import {AppModule} from './app/app.module';
-import {environment} from './environments/environment';
+import { enableProdMode, importProvidersFrom } from "@angular/core";
+import { environment } from "./environments/environment";
+import { AppComponent } from "./app/app.component";
+import { IncidentModule } from "./app/incident/incident.module";
+import { IndicatorModule } from "./app/indicator/indicator.module";
+import { CoreModule } from "./app/core/core.module";
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from "@angular/common/http";
+import { provideAnimations } from "@angular/platform-browser/animations";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
+import { bootstrapApplication, BrowserModule } from "@angular/platform-browser";
+import { httpInterceptorProviders } from "./app/core/intercepters/httpInterceptorProviders";
+import {
+  PreloadAllModules,
+  provideRouter,
+  withComponentInputBinding,
+  withInMemoryScrolling,
+  withPreloading,
+  withRouterConfig,
+} from "@angular/router";
+import { routes } from "./app/app-routes";
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    importProvidersFrom(
+      BrowserModule,
+      CommonModule,
+      FormsModule,
+      ReactiveFormsModule,
+      CoreModule,
+      IndicatorModule,
+      IncidentModule,
+    ),
+    provideRouter(
+      routes,
+      withRouterConfig({
+        onSameUrlNavigation: "reload",
+      }),
+      withInMemoryScrolling(),
+      withPreloading(PreloadAllModules),
+      withComponentInputBinding(),
+      withRouterConfig({
+        paramsInheritanceStrategy: "always",
+      }),
+    ),
+    httpInterceptorProviders,
+    provideAnimations(),
+    provideHttpClient(withInterceptorsFromDi()),
+  ],
+}).catch((err) => console.error(err));

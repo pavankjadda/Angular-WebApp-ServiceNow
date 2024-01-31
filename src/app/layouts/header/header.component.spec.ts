@@ -8,8 +8,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
-    })
+    imports: [HeaderComponent]
+})
     .compileComponents();
   }));
 

@@ -11,19 +11,18 @@ import {Http403ErrorComponent} from './helpers/http403-error/http403-error.compo
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgxSpinnerModule,
-    CoreRoutingModule
-  ],
-  declarations: [
-    LoginComponent,
-    UserComponent,
-    RoleComponent,
-    LogoutComponent,
-    Http403ErrorComponent]
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgxSpinnerModule,
+        CoreRoutingModule,
+        LoginComponent,
+        UserComponent,
+        RoleComponent,
+        LogoutComponent,
+        Http403ErrorComponent
+    ]
 })
 
 

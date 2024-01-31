@@ -8,8 +8,8 @@ describe('IncidentHomeComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ IncidentHomeComponent ]
-    })
+    imports: [IncidentHomeComponent]
+})
     .compileComponents();
   }));
 

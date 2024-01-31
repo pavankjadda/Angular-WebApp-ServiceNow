@@ -1,15 +1,18 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute, Router} from '@angular/router';
+import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import {AuthService} from '../auth/auth.service';
 import {SERVER_API_URL, USER_INFO_URL} from '../../app.constants';
 import {HttpHeaders} from '@angular/common/http';
-import {NgxSpinnerService} from 'ngx-spinner';
+import { NgxSpinnerService, NgxSpinnerModule } from 'ngx-spinner';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'],
+    standalone: true,
+    imports: [NgxSpinnerModule, FormsModule, ReactiveFormsModule, NgClass, NgIf, RouterLink]
 })
 export class LoginComponent implements OnInit
 {

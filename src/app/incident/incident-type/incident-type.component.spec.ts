@@ -8,8 +8,8 @@ describe('IncidentTypeComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ IncidentTypeComponent ]
-    })
+    imports: [IncidentTypeComponent]
+})
     .compileComponents();
   }));
 

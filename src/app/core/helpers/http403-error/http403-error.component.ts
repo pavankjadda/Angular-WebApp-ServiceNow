@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 
-@Component( {
-              selector: 'app-http403-error',
-              templateUrl: './http403-error.component.html',
-              styleUrls: ['./http403-error.component.css']
-            } )
+@Component({
+    selector: 'app-http403-error',
+    templateUrl: './http403-error.component.html',
+    styleUrls: ['./http403-error.component.css'],
+    standalone: true
+})
 export class Http403ErrorComponent implements OnInit
 {
 

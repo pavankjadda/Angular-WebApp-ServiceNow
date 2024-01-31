@@ -8,8 +8,8 @@ describe('IndicatorHomeComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ IndicatorHomeComponent ]
-    })
+    imports: [IndicatorHomeComponent]
+})
     .compileComponents();
   }));
 

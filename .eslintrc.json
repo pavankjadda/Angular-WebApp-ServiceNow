@@ -1,7 +1,8 @@
 {
   "root": true,
   "ignorePatterns": [
-    "projects/**/*"
+    "projects/**/*",
+    "**.spec.**"
   ],
   "overrides": [
     {
@@ -10,31 +11,76 @@
       ],
       "parserOptions": {
         "project": [
-          "tsconfig.json",
-          "e2e/tsconfig.json"
+          "tsconfig.json"
         ],
         "createDefaultProgram": true
       },
       "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "id-blacklist": [
+          "off"
+        ],
+        "@typescript-eslint/ban-ts-comment": [
+          "off"
+        ],
+        "@typescript-eslint/no-explicit-any": [
+          "off"
+        ],
+        "no-unsafe-optional-chaining": [
+          "off"
+        ],
+        "@typescript-eslint/no-unused-vars": [
+          "off"
+        ],
+        "no-mixed-spaces-and-tabs": [
+          "off"
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": [
+              "enumMember"
+            ],
+            "format": [
+              "UPPER_CASE"
+            ]
+          }
+        ],
         "@angular-eslint/component-selector": [
           "error",
           {
+            "type": "element",
             "prefix": "app",
-            "style": "kebab-case",
-            "type": "element"
+            "style": "kebab-case"
           }
         ],
         "@angular-eslint/directive-selector": [
           "error",
           {
+            "type": "attribute",
             "prefix": "app",
-            "style": "camelCase",
-            "type": "attribute"
+            "style": "camelCase"
           }
+        ],
+        "@angular-eslint/no-input-rename": "off",
+        "max-len": [
+          "error",
+          {
+            "code": 400
+          }
+        ],
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": [
+          "error"
+        ],
+        "curly": [
+          "error",
+          "multi-line"
         ]
       }
     },
@@ -43,9 +89,34 @@
         "*.html"
       ],
       "extends": [
-        "plugin:@angular-eslint/template/recommended"
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility"
       ],
-      "rules": {}
+      "rules": {
+        "@angular-eslint/template/label-has-associated-control": [
+          "off"
+        ],
+        "@angular-eslint/template/interactive-supports-focus": [
+          "off"
+        ],
+        "@angular-eslint/template/elements-content": [
+          "off"
+        ],
+        "@angular-eslint/template/click-events-have-key-events": [
+          "off"
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "plugin:@ngrx/recommended-requiring-type-checking"
+      ]
     }
+  ],
+  "extends": [
+    "prettier"
   ]
 }

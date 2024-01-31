@@ -10,8 +10,8 @@ describe( 'Http403ErrorComponent', () =>
   beforeEach( waitForAsync( () =>
                      {
                        TestBed.configureTestingModule( {
-                                                         declarations: [Http403ErrorComponent]
-                                                       } )
+    imports: [Http403ErrorComponent]
+} )
                               .compileComponents();
                      } ) );
 

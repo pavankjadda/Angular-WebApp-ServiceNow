@@ -3,12 +3,18 @@ import {IncidentService} from '../service/incident.service';
 import {Router} from '@angular/router';
 import {INCIDENT_API_URL, SERVER_API_URL} from '../../../app.constants';
 import {Incident} from '../model/incident';
-import {NgxSpinnerService} from 'ngx-spinner';
+import { NgxSpinnerService, NgxSpinnerModule } from 'ngx-spinner';
+import { InputTextModule } from 'primeng/inputtext';
+import { SharedModule } from 'primeng/api';
+import { TableModule } from 'primeng/table';
+import { NgIf, NgFor, NgSwitch } from '@angular/common';
 
 @Component({
-  selector: 'app-incident-list',
-  templateUrl: './incident-list.component.html',
-  styleUrls: ['./incident-list.component.css']
+    selector: 'app-incident-list',
+    templateUrl: './incident-list.component.html',
+    styleUrls: ['./incident-list.component.css'],
+    standalone: true,
+    imports: [NgxSpinnerModule, NgIf, TableModule, SharedModule, NgFor, NgSwitch, InputTextModule]
 })
 export class IncidentListComponent implements OnInit
 {
