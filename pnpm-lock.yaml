@@ -4154,7 +4154,7 @@ packages:
       minipass-pipeline: 1.2.4
       p-map: 4.0.0
       ssri: 10.0.0
-      tar: 6.1.12
+      tar: 6.2.1
       unique-filename: 3.0.0
 
   /call-bind@1.0.2:
@@ -7130,8 +7130,6 @@ packages:
     peerDependenciesMeta:
       webpack:
         optional: true
-      webpack-sources:
-        optional: true
     dependencies:
       webpack: 5.89.0(esbuild@0.19.11)
       webpack-sources: 3.2.3
@@ -7565,7 +7563,7 @@ packages:
       nopt: 7.2.0
       proc-log: 3.0.0
       semver: 7.5.4
-      tar: 6.1.12
+      tar: 6.2.1
       which: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -7955,7 +7953,7 @@ packages:
       read-package-json-fast: 3.0.1
       sigstore: 2.2.0
       ssri: 10.0.0
-      tar: 6.1.12
+      tar: 6.2.1
     transitivePeerDependencies:
       - bluebird
       - supports-color
@@ -9185,13 +9183,13 @@ packages:
       readable-stream: 3.6.0
     dev: true
 
-  /tar@6.1.12:
-    resolution: {integrity: sha512-jU4TdemS31uABHd+Lt5WEYJuzn+TJTCBLljvIAHZOz6M9Os5pJ4dD+vRFLxPa/n3T0iEFzpi+0x1UfuDZYbRMw==}
+  /tar@6.2.1:
+    resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
     dependencies:
       chownr: 2.0.0
       fs-minipass: 2.1.0
-      minipass: 3.3.4
+      minipass: 5.0.0
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
