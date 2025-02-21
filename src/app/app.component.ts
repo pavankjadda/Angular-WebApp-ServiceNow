@@ -4,10 +4,9 @@ import { RouterLink, RouterOutlet } from "@angular/router";
 import { MainComponent } from "./layouts/main/main.component";
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  standalone: true,
-  imports: [RouterLink, RouterOutlet, MainComponent],
+    selector: "app-root",
+    templateUrl: "./app.component.html",
+    imports: [RouterLink, RouterOutlet, MainComponent]
 })
 export class AppComponent {
   constructor() {

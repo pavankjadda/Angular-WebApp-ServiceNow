@@ -8,11 +8,10 @@ import {
 import { AuthService } from "../../core/auth/auth.service";
 
 @Component({
-  selector: "app-home",
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"],
-  standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+    selector: "app-home",
+    templateUrl: "./home.component.html",
+    styleUrls: ["./home.component.css"],
+    imports: [RouterLink, RouterLinkActive]
 })
 export class HomeComponent implements OnInit {
   constructor(

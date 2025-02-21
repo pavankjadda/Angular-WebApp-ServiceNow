@@ -14,17 +14,16 @@ import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 import { NgClass, NgIf } from "@angular/common";
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  standalone: true,
-  imports: [
-    NgxSpinnerModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgClass,
-    NgIf,
-    RouterLink,
-  ],
+    selector: "app-login",
+    templateUrl: "./login.component.html",
+    imports: [
+        NgxSpinnerModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgClass,
+        NgIf,
+        RouterLink,
+    ]
 })
 export class LoginComponent implements OnInit {
   message: string;

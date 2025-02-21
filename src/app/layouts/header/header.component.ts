@@ -4,11 +4,10 @@ import { NgIf } from "@angular/common";
 import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: "app-header",
-  templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.css"],
-  standalone: true,
-  imports: [RouterLink, NgIf],
+    selector: "app-header",
+    templateUrl: "./header.component.html",
+    styleUrls: ["./header.component.css"],
+    imports: [RouterLink, NgIf]
 })
 export class HeaderComponent implements OnInit {
   constructor() {}

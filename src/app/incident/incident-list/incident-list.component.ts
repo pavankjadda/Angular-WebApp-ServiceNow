@@ -10,19 +10,18 @@ import { Incident } from "../../types/incident";
 import { INCIDENT_API_URL, SERVER_API_URL } from "../../app.constants";
 
 @Component({
-  selector: "app-incident-list",
-  templateUrl: "./incident-list.component.html",
-  styleUrls: ["./incident-list.component.css"],
-  standalone: true,
-  imports: [
-    NgxSpinnerModule,
-    NgIf,
-    TableModule,
-    SharedModule,
-    NgFor,
-    NgSwitch,
-    InputTextModule,
-  ],
+    selector: "app-incident-list",
+    templateUrl: "./incident-list.component.html",
+    styleUrls: ["./incident-list.component.css"],
+    imports: [
+        NgxSpinnerModule,
+        NgIf,
+        TableModule,
+        SharedModule,
+        NgFor,
+        NgSwitch,
+        InputTextModule,
+    ]
 })
 export class IncidentListComponent implements OnInit {
   incidents: Array<Incident>;
